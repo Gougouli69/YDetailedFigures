@@ -1,0 +1,71 @@
+/* style du header */
+  header {
+    z-index: 100;
+    background-color: #282828;
+    box-shadow: 0px 5px 5px #ffffff25;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+    height: 65px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /* style du logo dans le header */
+  a.navbar-brand{
+    color: white;
+    margin-left: 15px;
+    font-size: 1.5em;
+    float: left;
+    width: 20%;
+}
+  
+  /* style du menu */
+  a.nav-link{
+    color: #885c0f;
+  }
+  
+  a.nav-link:hover {
+    color: white;
+  }
+  
+  a.nav-link.active {
+    color: white;
+  }
+
+  /* style du footer -- identique sur toutes les pages */
+footer{
+    background-color: #2C2C2C;
+    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.200);
+    height: 65px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    position: static;
+    width: 100%;
+}
+
+/* style global de la page */
+
+div.global-container{
+    background-color: #2C2C2C;
+    color: white;
+}
+
+.main-container{
+    background-color: #05030010;
+    /* box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.010); */
+    min-height: 900px;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 100px;
+    padding-top: 60px;
+}
+  
+  p1 {
+    color: #e09108;
+  }
+
+
+  
+  
