@@ -18,6 +18,10 @@
     float: left;
     width: 20%;
 }
+
+a.navbar-brand:hover{
+  color: #885c0f;
+}
   
   /* style du menu */
   a.nav-link{

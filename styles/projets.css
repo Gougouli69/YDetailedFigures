@@ -1,3 +1,19 @@
-button.choix-affichage svg{
-    color: aqua;
+.choix-affichage svg path {
+    fill: blue !important;
 }
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice svg {
+    vertical-align: middle;
+}
+
+.choice button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
