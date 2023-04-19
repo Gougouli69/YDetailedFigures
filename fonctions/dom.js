@@ -1,15 +1,37 @@
 const data = Projet;
-
 const cardContainer = document.querySelector(".card-container");
 
-// Créer une carte pour chaque objet de données
 data.forEach((item) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.backgroundColor = "#D9D9D9";
   card.style.textAlign = "center";
   card.style.width = "300px";
-  card.innerHTML = `<img src="${item.imageCardUrl}"id="card_image"><h2>${item.nom}</h2><p>${item.brief}</p>`;
+
+  const link = document.createElement("a");
+  link.href = "#"; // utilisez "#" pour éviter que la page ne se recharge
+  link.style.textDecoration = "none";
+  link.style.color = "inherit";
+  link.addEventListener("click", () => {
+    // Lorsque la carte est cliquée, naviguer vers la page correspondante
+    const cardName = encodeURIComponent(item.nom);
+    window.location.href = `card.html?name=${cardName}`;
+  });
+  card.appendChild(link);
+
+  const image = document.createElement("img");
+  image.src = item.imageCardUrl;
+  image.id = "card_image";
+  link.appendChild(image);
+
+  const title = document.createElement("h2");
+  title.textContent = item.nom;
+  link.appendChild(title);
+
+  const description = document.createElement("p");
+  description.textContent = item.brief;
+  link.appendChild(description);
+
   cardContainer.appendChild(card);
 });
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Détails de la carte</title>
+  </head>
+  <body>
+    <h2 id="card-title"></h2>
+    <img id="card-image" src="" alt="Image de la carte" />
+    <p id="card-description"></p>
+
+    <script src="./assets/consts/constsFigurines.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const cardName = decodeURIComponent(params.get("name"));
+
+      // Trouver la carte correspondante dans la liste des données de projet
+      const cardData = Projet.find((item) => item.nom === cardName);
+
+      // Mettre à jour les éléments HTML avec les informations de la carte sélectionnée
+      const titleElement = document.getElementById("card-title");
+      const imageElement = document.getElementById("card-image");
+      const descriptionElement = document.getElementById("card-description");
+
+      titleElement.textContent = cardData.nom;
+      imageElement.src = cardData.imageCardUrl;
+      descriptionElement.textContent = cardData.description;
+    </script>
+  </body>
+</html>
