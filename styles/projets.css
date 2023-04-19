@@ -3,17 +3,67 @@
 }
 
 .choice {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
 }
 
-.choice svg {
-    vertical-align: middle;
+#show-Card{
+    grid-row: 1;
 }
 
-.choice button {
-    display: inline-block;
-    vertical-align: middle;
+#show-List{
+    grid-row: 2;
 }
 
+/* .choice svg path{
+    width: 100%;
+    height: 100%;
+}
+
+
+button.choix-affichage {
+    width: 100%;
+    height: 100%;
+} */
+
+/* Base styles ========== */
+figure {
+    border-radius:4px;
+    margin:2em;
+    width:6em;
+    height:6em;
+    /* display:-webkit-inline-flex; */
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
+    border:.5em solid #fff;
+    cursor:pointer;
+  }
+  figure:hover { background:#222; border-color:#222; }
+  figure div { transition:.2s; font-family:icon; }
+  
+  
+  
+  /* Nav (three-line) icon ========== */
+  .listicon div {
+    background:#fff;
+    width:2.7em;
+    height:.5em;
+    box-shadow:0 -.8em #fff, 0  .8em #fff; }
+  .navicon:hover div { box-shadow:0 -1em #fff, 0 1em #fff; font-family:"icon"; }
+  
+  
+  
+  /* Grid icon ========== */
+  .gridicon div {
+    background:#fff;
+    width:.5em;
+    height:.5em;
+    box-shadow:-.8em -.8em #fff, 0 -.8em #fff, .8em -.8em #fff, -.8em 0 #fff, .8em 0 #fff, -.8em .8em #fff, 0 .8em #fff, .8em .8em #fff; }
+  .gridicon:hover div { box-shadow:-1em -1em #fff, 0 -1em #fff, 1em -1em #fff, -1em 0 #fff, 1em 0 #fff, -1em 1em #fff, 0 1em #fff, 1em 1em #fff; }
+  
+  
+  
+  
