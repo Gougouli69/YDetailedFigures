@@ -23,28 +23,23 @@
       <div class="nav-bar">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              aria-current="page"
-              href="./index.html"
-              >Accueil</a
-            >
+            <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link active"  href="./projets.html"
-              >Projets</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="./aPropos.html"
-              >A propos</a
-            >
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-cyan" href="./projets.html">Tous</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2021">Année 2021</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2022">Année 2022</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled"  href="/modele3D.html"
-              >modèles 3D</a
-            >
+            <a class="nav-link" href="./aPropos.html">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/modele3D.html">modèles 3D</a>
           </li>
         </ul>
       </div>
@@ -59,14 +54,28 @@
             Figurines plus vraies que nature
           </h3>
           <div class="choice">
-            <button class="choix-affichage" id="show-Card">
+            <button class="choix-affichage" style="display: none" id="show-Card">
               <img
                 src="/assets/images/icones/icone-grille.svg"
                 alt="Card"
                 width="50px"
               />
             </button>
-            <button class="choix-affichage" id="show-List">
+            <button class="choix-affichage active"  id="show-Card-active">
+              <img
+                src="/assets/images/icones/icone-grille-active.svg"
+                alt="Card"
+                width="50px"
+              />
+            </button>
+            <button class="choix-affichage" style="display: none" id="show-List-active">
+              <img
+                src="/assets/images/icones/icone-listes-active.svg"
+                alt="List"
+                width="50px"
+              />
+            </button>
+            <button class="choix-affichage active" id="show-List">
               <img
                 src="/assets/images/icones/icone-listes.svg"
                 alt="List"
@@ -90,7 +99,7 @@
     ></script>
     <script src="./assets/consts/constsFigurines.js"></script>
     <script src="./fonctions/fonctions.js"></script>
-    <script src="./fonctions/dom.js"></script>
+    <script src="./fonctions/projets.js"></script>
   </body>
   <footer>Copyright 2022</footer>
 </html>

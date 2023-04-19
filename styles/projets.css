@@ -64,6 +64,10 @@ figure {
     box-shadow:-.8em -.8em #fff, 0 -.8em #fff, .8em -.8em #fff, -.8em 0 #fff, .8em 0 #fff, -.8em .8em #fff, 0 .8em #fff, .8em .8em #fff; }
   .gridicon:hover div { box-shadow:-1em -1em #fff, 0 -1em #fff, 1em -1em #fff, -1em 0 #fff, 1em 0 #fff, -1em 1em #fff, 0 1em #fff, 1em 1em #fff; }
   
+  .choix-affichage {
+    display: none;
+  }
   
-  
-  
+  .choix-affichage.active {
+    display: block;
+  }

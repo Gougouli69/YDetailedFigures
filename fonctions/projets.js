@@ -1,9 +1,19 @@
 const data = Projet;
+const url = window.location.href;
+console.log("URL complète : " + url);
+var parametres = window.location.search;
+console.log("Paramètres : " + parametres);
+const annee = url.split("annee=")[1];
+console.log(annee);
 
 const cardContainer = document.querySelector(".card-container");
 
+const dataFilter = data.filter((el) => el.année === annee);
+
+const dataProjet = annee ? dataFilter : data;
+
 // Créer une carte pour chaque objet de données
-data.forEach((item) => {
+dataProjet.forEach((item) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.backgroundColor = "#D9D9D9";
@@ -14,9 +24,8 @@ data.forEach((item) => {
 });
 
 let compt = 0;
-const lists = Projet;
 const listContainer = document.querySelector("#list-container");
-lists.forEach((list) => {
+dataProjet.forEach((list) => {
   if (compt % 2 == 0) {
     listContainer.innerHTML += `
           <div class="lists_item_left">

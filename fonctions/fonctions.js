@@ -43,17 +43,27 @@ function switchThemeLight() {
 }
 
 // ----------bouton pour changer le style d'affichage de la page projet-------------
-var showDiv1 = document.getElementById("show-Card");
-var showDiv2 = document.getElementById("show-List");
-var div1 = document.getElementById("Card");
-var div2 = document.getElementById("List");
+const iconeCard = document.getElementById("show-Card");
+const iconeList = document.getElementById("show-List");
+const iconeCardActive = document.getElementById("show-Card-active");
+const iconeListActive = document.getElementById("show-List-active");
+const affichageCard = document.getElementById("Card");
+const affichageList = document.getElementById("List");
 
-showDiv1.addEventListener("click", function () {
-  div2.style.display = "none";
-  div1.style.display = "flex";
+iconeCard.addEventListener("click", function () {
+  affichageList.style.display = "none";
+  affichageCard.style.display = "flex";
+  iconeCard.style.display = "none";
+  iconeList.style.display = "block";
+  iconeCardActive.style.display = "block";
+  iconeListActive.style.display = "none";
 });
 
-showDiv2.addEventListener("click", function () {
-  div1.style.display = "none";
-  div2.style.display = "block";
+iconeList.addEventListener("click", function () {
+  affichageCard.style.display = "none";
+  affichageList.style.display = "block";
+  iconeCard.style.display = "block";
+  iconeList.style.display = "none";
+  iconeCardActive.style.display = "none";
+  iconeListActive.style.display = "block";
 });
