@@ -68,7 +68,8 @@ const Projet = [
     description:
       "Lactour et Colly sont deux petits champignons partis explorer la forêt. Ils sont inspirés de vrai champignon, Lactour est inspiré d’un Lactaire Velour et Colly, d’un Collibye Visqueuse",
     artiste: "Mazarine",
-    imageCardUrl: "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_visu_1.jpg",
+    imageCardUrl:
+      "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_visu_1.jpg",
     charaUrl: [
       "/assets/images/photoProjets/Lactouretcolly/colly_charadesign.jpg",
       "/assets/images/photoProjets/Lactouretcolly/lactour_charadesign.jpg",
