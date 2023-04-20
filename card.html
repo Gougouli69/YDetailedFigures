@@ -40,18 +40,25 @@
     <div class="global-container">
       <div class="main-container">
         <div class="container">
-          <div class="description">
-            <h2 id="card-title"></h2>
-            <p id="card-brief"></p>
-            <h5 id="card-description"></h5>
-            <div class="artiste">
-              <h3>Artiste</h3>
-              <p id="card-artiste"></p>
-              <p id="card-date"></p>
+          <div class="principal">
+            <div class="description">
+              <h2 id="card-title"></h2>
+              <p id="card-brief"></p>
+              <h5 id="card-description"></h5>
+              <div class="artiste">
+                <h3>Artiste</h3>
+                <p id="card-artiste"></p>
+                <p id="card-date"></p>
+              </div>
             </div>
+            <div id="card-image"></div>
           </div>
-
-          <div class="carousel"></div>
+          <h2>CharaDesign</h2>
+          <div id="CharaDesign"></div>
+          <h2>Inspiration</h2>
+          <div id="Inspiration"></div>
+          <h2>Visualisation</h2>
+          <div id="Visualisation"></div>
         </div>
       </div>
     </div>
@@ -70,12 +77,29 @@
       const descriptionElement = document.getElementById("card-description");
       const artisteElement = document.getElementById("card-artiste");
       const dateElement = document.getElementById("card-date");
-
       titleElement.textContent = cardData.nom;
       briefElement.textContent = cardData.brief;
       descriptionElement.textContent = cardData.description;
       artisteElement.textContent = cardData.artiste;
       dateElement.textContent = cardData.année;
+
+      const imageElement = document.getElementById("card-image");
+      imageElement.innerHTML = `<img class="imgcard" src="${cardData.imageCardUrl}" width="70%">`;
+
+      const charaElement = document.getElementById("CharaDesign");
+      charaElement.innerHTML = `<img src="${cardData.charaUrl}" width="50%">`;
+
+      const inspirationElement = document.getElementById("Inspiration");
+      inspirationElement.innerHTML = `<img src="${cardData.inspiUrl}" width="50%" >`;
+
+      const visualisationElement = document.getElementById("Visualisation");
+      let imagesHtmlb = "";
+      for (let i = 0; i < cardData.visualisationUrl.length; i++) {
+        imagesHtmlb += `<img src="${cardData.visualisationUrl[i]}" width="50%">`;
+      }
+      visualisationElement.innerHTML = imagesHtmlb;
+
+      // On ajoute la carte à la liste des cartes
     </script>
   </body>
 </html>

@@ -9,8 +9,9 @@
 }
 
 .container {
-  height: 85vh;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: #00000064;
   align-items: center;
@@ -25,13 +26,13 @@
   align-items: flex-start;
   justify-content: space-around;
 }
-
-.images {
-  background-color: aquamarine;
-  width: 60%;
-  height: 80%;
+.principal {
+  display: flex;
+  flex-direction: row;
 }
 
-#card-image {
-  width: 50%;
+.imgcard {
+  width: 70%;
+  margin: 2%;
+  border-radius: 25px;
 }
