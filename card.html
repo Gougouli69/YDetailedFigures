@@ -87,17 +87,49 @@
       imageElement.innerHTML = `<img class="imgcard" src="${cardData.imageCardUrl}" width="70%">`;
 
       const charaElement = document.getElementById("CharaDesign");
-      charaElement.innerHTML = `<img src="${cardData.charaUrl}" width="50%">`;
+      let imagesHtmlc = "";
+      if (cardData.charaUrl.length >= 1) {
+        for (let i = 0; i < cardData.charaUrl.length; i++) {
+          const img = new Image();
+          img.onload = () => {
+            imagesHtmlc += `<img src="${cardData.charaUrl[i]}" width="50%">`;
+            charaElement.innerHTML = imagesHtmlc;
+          };
+          img.src = cardData.charaUrl[i];
+        }
+      } else {
+        charaElement.innerHTML = "";
+      }
 
       const inspirationElement = document.getElementById("Inspiration");
-      inspirationElement.innerHTML = `<img src="${cardData.inspiUrl}" width="50%" >`;
+      let imagesHtmla = "";
+      if (cardData.inspiUrl.length >= 1) {
+        for (let i = 0; i < cardData.inspiUrl.length; i++) {
+          const img = new Image();
+          img.onload = () => {
+            imagesHtmla += `<img src="${cardData.inspiUrl[i]}" width="50%">`;
+            inspirationElement.innerHTML = imagesHtmla;
+          };
+          img.src = cardData.inspiUrl[i];
+        }
+      } else {
+        inspirationElement.innerHTML = "";
+      }
 
       const visualisationElement = document.getElementById("Visualisation");
       let imagesHtmlb = "";
-      for (let i = 0; i < cardData.visualisationUrl.length; i++) {
-        imagesHtmlb += `<img src="${cardData.visualisationUrl[i]}" width="50%">`;
+      if (cardData.visualisationUrl.length >= 1) {
+        for (let i = 0; i < cardData.visualisationUrl.length; i++) {
+          const img = new Image();
+          img.onload = () => {
+            imagesHtmlb += `<img src="${cardData.visualisationUrl[i]}" width="50%">`;
+            visualisationElement.innerHTML = imagesHtmlb;
+          };
+          img.src = cardData.visualisationUrl[i];
+        }
+      } else {
+        visualisationElement.innerHTML = "";
       }
-      visualisationElement.innerHTML = imagesHtmlb;
 
       // On ajoute la carte à la liste des cartes
     </script>

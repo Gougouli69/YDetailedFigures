@@ -25,11 +25,8 @@ const Projet = [
     artiste: "Mazarine",
     imageCardUrl: "/assets/images/photoProjets/Maraiche/maraiche_post.jpg",
     charaUrl: "/assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg",
-    inspiUrl: "/assets/images/photoProjets/Maraiche/maraiche_inspiration.jpg",
+    inspiUrl: "",
     visualisationUrl: [
-      "/assets/images/photoProjets/Maraiche/maraiche_visu_1.jpg",
-      "/assets/images/photoProjets/Maraiche/maraiche_visu_2.jpg",
-      "/assets/images/photoProjets/Maraiche/maraiche_visu_3.jpg",
       "/assets/images/photoProjets/Maraiche/maraiche_visu_4.jpg",
     ],
     figurineUrl: [""],
@@ -71,7 +68,7 @@ const Projet = [
     imageCardUrl:
       "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_visu_1.jpg",
     charaUrl: [
-      "/assets/images/photoProjets/Lactouretcolly/colly_charadesign.jpg",
+      "/assets/images/photoProjets/LactourEtColly/colly_charadesign.jpg",
       "/assets/images/photoProjets/Lactouretcolly/lactour_charadesign.jpg",
     ],
     inspiUrl: "",
