@@ -83,11 +83,32 @@
               />
             </button>
           </div>
+          <div id="title-year"></div>
           <div class="card-container" id="Card"></div>
           <div id="List" style="display: none">
             <div class="lists">
               <div id="list-container"></div>
             </div>
+          </div>
+          <div id="section-equipe" class="equipe sub-faction-container " >
+            <h3 style="display: none"> L'Equipe </h3>
+            <div class="presation-paragraph" style="display: none">
+                <p>Durant toute l'année, notre équipe d'artistes a travaillé pour créer une ou plusieurs figurines. <br>
+                Chaque artiste était libre de choisir n'importe quel thème pour sa figurine.</p>
+            </div>
+            <div id="liste-equipe">
+                
+                <div class="container text-center">
+                    <div id="grid-equipe" class="row grid-equipe">
+                        <!-- contenu créer par component.js -->
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+          <div id="team">
+            <div id="title-team"></div>
+            <div id="grid-team"></div>
           </div>
         </div>
       </div>
@@ -98,8 +119,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/consts/constsFigurines.js"></script>
+    <script src="./assets/consts/constsEquipe.js"></script>
     <script src="./fonctions/fonctions.js"></script>
     <script src="./fonctions/projets.js"></script>
+    <script src="./fonctions/components.js"></script>
   </body>
   <footer>Copyright 2022</footer>
 </html>

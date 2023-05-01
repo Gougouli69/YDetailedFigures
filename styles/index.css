@@ -74,7 +74,7 @@ div.global-container{
 /* sous parties  */
 
 div.sub-faction-container{
-    margin-top: 200px;
+    margin-top: 130px;
     text-align: center;
 }
 
@@ -106,7 +106,7 @@ h1{
 /* style du paragarphe de présentation */
 
 .presation-paragraph{
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: large;
 }
 
@@ -176,4 +176,12 @@ span.image-text{
     opacity: 0.9;
     color:#FFFFFF;
     margin: auto;
+}
+
+.lien-annees>div{
+    margin-top: 100px;
+}
+
+.image-annee{
+    margin-bottom: 20px;
 }
