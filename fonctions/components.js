@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(urlcourante);
   switch (true) {
     case urlcourante.includes(2021):
+      console.log("init 2021");
       initPage2021();
       break;
     case urlcourante.includes(2022):
@@ -16,16 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const team = Equipe;
+const fieldEquipeTitre = document.querySelector("#section-equipe h3");
+const fieldEquipeDescription = document.querySelector(
+  "#section-equipe .presation-paragraph"
+);
+
 function initPage2021() {
-  const equipeAnnee = equipe.filter((el) => el.annee === "2021");
+  const equipeAnnee = team.filter((el) => el.annee === "2021");
+  fieldEquipeTitre.style.display = "block";
+  fieldEquipeDescription.style.display = "block";
   afficheEquipe(equipeAnnee);
 }
 
-function initPage2022() {}
-
-function initPageProjet() {}
-
-function initPageModele() {}
+function initPage2022() {
+  const equipeAnnee = team.filter((el) => el.annee === "2022");
+  fieldEquipeTitre.style.display = "block";
+  fieldEquipeDescription.style.display = "block";
+  afficheEquipe(equipeAnnee);
+}
 
 function afficheEquipe(arr) {
   const cardField = document.getElementById("grid-equipe");

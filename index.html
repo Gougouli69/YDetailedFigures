@@ -20,16 +20,23 @@
       <div class="nav-bar">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./projets.html">Projets</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-cyan" href="./projets.html">Tous</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2021">Année 2021</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2022">Année 2022</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./aPropos.html">A propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="./modele3D.html">modèles 3D</a>
+            <a class="nav-link disabled" href="/modele3D.html">modèles 3D</a>
           </li>
         </ul>
       </div>
@@ -92,32 +99,32 @@
           </div>
         </div>
 
-        <!-- <div class="projets lien-annees sub-faction-container">
+        <div class="projets lien-annees sub-faction-container">
                 <h1>Voir les realisations </h1>
                 <div class="container text-center">
                     <div class="row">
                       <div class="col lien-projets-annee">
-                        <a class="image-annee" href="./projetAnnee2021.html">
+                        <a class="image-annee" href="./projets.html?annee=2021">
                             <img class="lien-projet-picture" src="./assets/images/logo-ydf/logo_annee2021.jpg" class="rounded d-block" alt="...">
                             <div class="text-hover-lien">
                                 <span class="image-text">Voir les projets</span>
                             </div>
                         </a>
                         <div>
-                            <a class="lien-details annee" href="./projetAnnee2021.html">
+                            <a class="lien-details annee" href="./projets.html?annee=2021">
                                 Année 2021
                              </a>
                         </div>
                       </div>
                       <div class="col lien-projets-annee">
-                        <a class="image-annee" href="./projetAnnee2022.html">
+                        <a class="image-annee" href="./projets.html?annee=2022">
                             <img class="lien-projet-picture" src="./assets/images/logo-ydf/logo_annee2022.png" class="rounded d-block" alt="...">
                             <div class="text-hover-lien">
                                 <span class="image-text">Voir les projets</span>
                             </div>
                         </a>
                         <div>
-                            <a class="lien-details annee" href="./projetAnnee2021.html">
+                            <a class="lien-details annee" href="./projets.html?annee=2022">
                                 Année 2022
                              </a>
                         </div>
@@ -130,14 +137,14 @@
                             </div>
                         </a>
                         <div>
-                            <a class="lien-details annee" href="./projetAnnee2021.html">
+                            <a class="lien-details annee" href="./projets.html">
                                 Tous les projets
                              </a>
                         </div>
                       </div>
                     </div>
                   </div>
-            </div> -->
+            </div>
 
         <div class="projet-modeles sub-faction-container">
           <h1>Telecharger un modele</h1>

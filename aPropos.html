@@ -24,29 +24,23 @@
       <div class="nav-bar">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-theme="dark"
-              aria-current="page"
-              href="./index.html"
-              >Accueil</a
-            >
+            <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" data-theme="dark" href="./projets.html"
-              >Projets</a
-            >
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-cyan" href="./projets.html">Tous</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2021">Année 2021</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2022">Année 2022</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" data-theme="dark" href="./aPropos.html"
-              >A propos</a
-            >
+            <a class="nav-link" href="./aPropos.html">A propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" data-theme="dark" href="/modele3D.html"
-              >Modèles 3D</a
-            >
+            <a class="nav-link disabled" href="/modele3D.html">modèles 3D</a>
           </li>
         </ul>
       </div>
