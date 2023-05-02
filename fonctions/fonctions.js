@@ -1,47 +1,3 @@
-//Switcher thème dark et light
-
-// let theme = "dark";
-const monStockage = sessionStorage;
-monStockage.setItem("theme", "dark");
-
-document.addEventListener("DOMContentLoaded", () => {
-  const theme = monStockage.getItem("theme");
-  darkMode(theme);
-  console.log(theme);
-});
-
-document.querySelectorAll("#light-icon").forEach((item) => {
-  item.addEventListener("click", switchThemeLight);
-  item.addEventListener("click", darkMode);
-});
-
-document.querySelectorAll("#dark-icon").forEach((item) => {
-  item.addEventListener("click", switchThemeDark);
-  item.addEventListener("click", darkMode);
-});
-
-function darkMode(theme) {
-  let themeSwitchableElement = document.querySelectorAll("[data-theme]");
-  // let mode = this.dataset.mode;
-  var theme = monStockage.getItem("theme");
-  // themeSwitchableElement.forEach(el => el.dataset.theme = mode)
-  themeSwitchableElement.forEach((el) => (el.dataset.theme = theme));
-}
-
-function switchThemeDark() {
-  document.querySelector("#dark-icon").classList.add("active");
-  document.querySelector("#light-icon").classList.remove("active");
-  monStockage.setItem("theme", "dark");
-  // theme = "dark";
-}
-
-function switchThemeLight() {
-  document.querySelector("#light-icon").classList.add("active");
-  document.querySelector("#dark-icon").classList.remove("active");
-  monStockage.setItem("theme", "light");
-  // theme = "light"
-}
-
 // ----------bouton pour changer le style d'affichage de la page projet-------------
 const iconeCard = document.getElementById("show-Card");
 const iconeList = document.getElementById("show-List");
@@ -66,4 +22,24 @@ iconeList.addEventListener("click", function () {
   iconeList.style.display = "none";
   iconeCardActive.style.display = "none";
   iconeListActive.style.display = "block";
+});
+
+// Fonction modale
+const projets = document.querySelectorAll(".card-container .card");
+const modals = document.querySelectorAll(".modal-container");
+
+projets.forEach((projet) => {
+  projet.addEventListener("click", () => {
+    const modalId = projet.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    modal.style.display = "flex";
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal || e.target.classList.contains("close-modal")) {
+      modal.style.display = "none";
+    }
+  });
 });

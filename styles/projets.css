@@ -90,3 +90,7 @@ figure {
 .grid-team{
     text-align: center;
 }
+
+.card-container .card{
+  cursor: pointer;
+}
