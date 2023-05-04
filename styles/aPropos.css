@@ -27,7 +27,9 @@ span {
     text-transform: capitalize;
     font-weight: bold;
     margin: 5%;
+    margin-top: 180px;
     font-size: 2rem;
+    text-align: center;
   }
   
   .title2 {
@@ -81,3 +83,49 @@ span {
     justify-content: center;
   }
   
+  .image-etape{
+    height: 200px;
+    width: auto;
+  }
+
+  .tempsParTaille{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 100px;
+    
+  }
+
+  .taille{
+    display: grid;
+    grid-template-rows: 300px auto;
+  }
+
+  .texte{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.petit img{
+  height: 150px;
+}
+
+.moyen img{
+  height: 200px;
+}
+
+.grand img{
+  height: 250px;
+}
+
+
+.image {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  margin-top: auto;
+}

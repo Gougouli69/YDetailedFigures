@@ -2,8 +2,8 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
-    <title>Y Detailed figures</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo-ydf/logo_y_orange.png" />
+    <title>Projets</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/component/gridCard.css" />
@@ -23,28 +23,23 @@
       <div class="nav-bar">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              aria-current="page"
-              href="./index.html"
-              >Accueil</a
-            >
+            <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link active"  href="./projets.html"
-              >Projets</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="./aPropos.html"
-              >A propos</a
-            >
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-cyan" href="./projets.html">Tous</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2021">Année 2021</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2022">Année 2022</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled"  href="/modele3D.html"
-              >modèles 3D</a
-            >
+            <a class="nav-link" href="./aPropos.html">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/modele3D.html">modèles 3D</a>
           </li>
         </ul>
       </div>
@@ -59,14 +54,28 @@
             Figurines plus vraies que nature
           </h3>
           <div class="choice">
-            <button class="choix-affichage" id="show-Card">
+            <button class="choix-affichage" style="display: none" id="show-Card">
               <img
                 src="/assets/images/icones/icone-grille.svg"
                 alt="Card"
                 width="50px"
               />
             </button>
-            <button class="choix-affichage" id="show-List">
+            <button class="choix-affichage active"  id="show-Card-active">
+              <img
+                src="/assets/images/icones/icone-grille-active.svg"
+                alt="Card"
+                width="50px"
+              />
+            </button>
+            <button class="choix-affichage" style="display: none" id="show-List-active">
+              <img
+                src="/assets/images/icones/icone-listes-active.svg"
+                alt="List"
+                width="50px"
+              />
+            </button>
+            <button class="choix-affichage active" id="show-List">
               <img
                 src="/assets/images/icones/icone-listes.svg"
                 alt="List"
@@ -74,11 +83,32 @@
               />
             </button>
           </div>
+          <div id="title-year"></div>
           <div class="card-container" id="Card"></div>
           <div id="List" style="display: none">
             <div class="lists">
               <div id="list-container"></div>
             </div>
+          </div>
+          <div id="section-equipe" class="equipe sub-faction-container " >
+            <h3 style="display: none"> L'Equipe </h3>
+            <div class="presation-paragraph" style="display: none">
+                <p>Durant toute l'année, notre équipe d'artistes a travaillé pour créer une ou plusieurs figurines. <br>
+                Chaque artiste était libre de choisir n'importe quel thème pour sa figurine.</p>
+            </div>
+            <div id="liste-equipe">
+                
+                <div class="container text-center">
+                    <div id="grid-equipe" class="row grid-equipe">
+                        <!-- contenu créer par component.js -->
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+          <div id="team">
+            <div id="title-team"></div>
+            <div id="grid-team"></div>
           </div>
         </div>
       </div>
@@ -89,8 +119,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/consts/constsFigurines.js"></script>
+    <script src="./assets/consts/constsEquipe.js"></script>
     <script src="./fonctions/fonctions.js"></script>
-    <script src="./fonctions/dom.js"></script>
+    <script src="./fonctions/projets.js"></script>
+    <script src="./fonctions/components.js"></script>
   </body>
   <footer>Copyright 2022</footer>
 </html>

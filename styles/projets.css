@@ -1,3 +1,92 @@
-button.choix-affichage svg{
-    color: aqua;
+.choix-affichage svg path {
+    fill: blue !important;
+}
+
+.choice {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#show-Card{
+    grid-row: 1;
+}
+
+#show-List{
+    grid-row: 2;
+}
+
+/* .choice svg path{
+    width: 100%;
+    height: 100%;
+}
+
+
+button.choix-affichage {
+    width: 100%;
+    height: 100%;
+} */
+
+/* Base styles ========== */
+figure {
+    border-radius:4px;
+    margin:2em;
+    width:6em;
+    height:6em;
+    /* display:-webkit-inline-flex; */
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
+    border:.5em solid #fff;
+    cursor:pointer;
+  }
+  figure:hover { background:#222; border-color:#222; }
+  figure div { transition:.2s; font-family:icon; }
+  
+  
+  
+  /* Nav (three-line) icon ========== */
+  .listicon div {
+    background:#fff;
+    width:2.7em;
+    height:.5em;
+    box-shadow:0 -.8em #fff, 0  .8em #fff; }
+  .navicon:hover div { box-shadow:0 -1em #fff, 0 1em #fff; font-family:"icon"; }
+  
+  
+  
+  /* Grid icon ========== */
+  .gridicon div {
+    background:#fff;
+    width:.5em;
+    height:.5em;
+    box-shadow:-.8em -.8em #fff, 0 -.8em #fff, .8em -.8em #fff, -.8em 0 #fff, .8em 0 #fff, -.8em .8em #fff, 0 .8em #fff, .8em .8em #fff; }
+  .gridicon:hover div { box-shadow:-1em -1em #fff, 0 -1em #fff, 1em -1em #fff, -1em 0 #fff, 1em 0 #fff, -1em 1em #fff, 0 1em #fff, 1em 1em #fff; }
+  
+  .choix-affichage {
+    display: none;
+  }
+  
+  .choix-affichage.active {
+    display: block;
+  }
+
+  /* Team card ========== */
+  .card-equipe{
+    max-width: 200px;
+    background-color: rgba(196, 196, 196, 0.05);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    margin-bottom: 25px;
+    margin: 30px;
+}
+
+.card-equipe img{ 
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+}
+
+.grid-team{
+    text-align: center;
 }

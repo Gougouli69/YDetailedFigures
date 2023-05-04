@@ -2,8 +2,8 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
-    <title>Ydetailed figures</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo-ydf/logo_y_orange.png" />
+    <title>A propos</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/aPropos.css" />
@@ -24,29 +24,23 @@
       <div class="nav-bar">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-theme="dark"
-              aria-current="page"
-              href="./index.html"
-              >Accueil</a
-            >
+            <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" data-theme="dark" href="./projets.html"
-              >Projets</a
-            >
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-cyan" href="./projets.html">Tous</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2021">Année 2021</a></li>
+              <li><a class="dropdown-item" href="./projets.html?annee=2022">Année 2022</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" data-theme="dark" href="./aPropos.html"
-              >A propos</a
-            >
+            <a class="nav-link" href="./aPropos.html">A propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" data-theme="dark" href="/modele3D.html"
-              >Modèles 3D</a
-            >
+            <a class="nav-link disabled" href="/modele3D.html">modèles 3D</a>
           </li>
         </ul>
       </div>
@@ -81,16 +75,16 @@
                 </p>
               </div>
               <img
-                src="./assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg"
-                alt="maraiche_charadesign"
-                class="logo"
+                src="assets\images\photoProjets\Foxia\foxia_charadesign_2.jpg"
+                alt="charadesign"
+                class="image-etape"
               />
             </div>
             <div class="lineColumn">
               <img
-                src="./assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg"
+                src="assets\images\photoProjets\Hyperion\hyperion_mode_3.png"
                 alt="maraiche_charadesign"
-                class="logo"
+                class="image-etape"
               />
               <div class="columnCenter" id="start">
                 <div class="title2">Etape 2 :</div>
@@ -109,16 +103,16 @@
                 </p>
               </div>
               <img
-                src="./assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg"
+                src="assets\images\photoProjets\Allarien\allarien_visu_6.png"
                 alt="maraiche_charadesign"
-                class="logo"
+                class="image-etape"
               />
             </div>
             <div class="lineColumn">
               <img
                 src="./assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg"
                 alt="maraiche_charadesign"
-                class="logo"
+                class="image-etape"
               />
               <div class="columnCenter" id="start">
                 <div class="title2">Etape 4 :</div>
@@ -228,6 +222,57 @@
               Les figurines pourront être imprimmer selon 3 tailles disponibles
             </p>
             <p>Le temps d’impression dépend de la taille de la figurine</p>
+            <div class="tempsParTaille images">
+              <div class="taille petit">
+                <div class="image">
+                  <img src="assets\images\icones\silouhette.png" alt="silouhette">
+                </div>
+                <div class="texte">
+                  15 cm <br>
+                  maximum 16H
+                </div>
+              </div>
+              <div class="taille moyen">
+                <div class="image">
+                  <img src="assets\images\icones\silouhette.png" alt="silouhette">
+                </div>
+                <div class="texte">
+                  25 cm <br>
+                  maximum 32H
+                </div>
+              </div>
+              <div class="taille grand">
+                <div class="image">
+                  <img src="assets\images\icones\silouhette.png" alt="silouhette">
+                </div>
+                <div class="texte">
+                  35 cm <br>
+                  maximum 40H
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="manuel">
+            <div class="title">
+              <span>M</span>anuel <span>D</span>es <span>I</span>mprimantes <span>3</span>d
+            </div>
+            <div class="projet-presentation sub-faction-container">
+              <div class="presation-paragraph">
+                <p>
+                  Vous pouvez télecharger le manuel d'utilisation des imprimantes 3D. 
+                </p>
+              </div>
+              <div>
+                <button
+                  class="lien-details projet"
+                  href="http://www.alsacreations.com/astuce/lire/1603-html5-attribut-download.html"
+                  download="Article_HTML5_download.txt"
+                >
+                <a href="./assets/fichiers/manuelImprimantes.pdf"
+                download="manuel_imprimantes.pdf">Télécharger le manuel</a>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
