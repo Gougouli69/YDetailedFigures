@@ -89,4 +89,34 @@ div.global-container{
 }
 
   
-  
+.presation-paragraph{
+  margin-top: 30px;
+  font-size: large;
+ 
+}
+
+div.manuel{
+  text-align: center;
+}
+
+button.lien-details{
+
+  background-color: #E09108;
+  border-radius: 10px;
+  color: #000000;
+  margin-top: 30px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border : 0;
+}
+
+button a{
+  color: #FFFFFF;
+  text-decoration: none;  
+}
+
+button a:hover{
+  color: #FFFFFF;
+  text-decoration: underline;  
+}
