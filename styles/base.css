@@ -70,6 +70,53 @@ div.global-container{
     color: #e09108;
   }
 
+  .card-equipe{
+    background-color: #d9d9d9;
+    max-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    margin-bottom: 25px;
+    margin: 30px;
+}
+
+.card-equipe img{ 
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+}
+.equipe{
+  margin-top: 90px;
+  text-align: center;
+}
 
   
-  
+.presation-paragraph{
+  margin-top: 30px;
+  font-size: large;
+ 
+}
+
+div.manuel{
+  text-align: center;
+}
+
+button.lien-details{
+
+  background-color: #E09108;
+  border-radius: 10px;
+  color: #000000;
+  margin-top: 30px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border : 0;
+}
+
+button a{
+  color: #FFFFFF;
+  text-decoration: none;  
+}
+
+button a:hover{
+  color: #FFFFFF;
+  text-decoration: underline;  
+}

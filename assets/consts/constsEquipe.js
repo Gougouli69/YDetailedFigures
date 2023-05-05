@@ -1,4 +1,4 @@
-const equipe = [
+const Equipe = [
   {
     id: 1,
     nom: "LEDE",
