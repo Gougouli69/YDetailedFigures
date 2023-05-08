@@ -168,8 +168,7 @@ const Projet = [
     id: 7,
     nom: "Hypérion",
     année: "2022",
-    brief:
-      "Hypérion vivait une vie paisible dans les cieux, jusqu'au jour où Hadès le scella dans un corps humain. Dans un accès de rage et de vengeance, il prit les armes et commença son aventure dans le monde souterrain pour se libérer. ",
+    brief: "Titan scellé",
     description:
       "Le personnage que nous suivons dans cette histoire s'appelle Hypérion, surnommé le petit Titan le fis d'Ouranos et de Gaïa dans sa vie passée, Hypérion, mener une vie paisible dans les cieux, jusqu'à un beau jour où hadès le dieu des enfers le scella dans un corps humain pour pas qu'il n'interfère dans son plan de conquête des cieux. dans un élan de rage et de vengeance Hypérion prie les armes, et commenca son aventure jusqu' aux enfers pour affronter Lucifer accompagner de son fidèle compagnon, pour récupérer son corps de Titan. ",
     artiste: "Guillaume",
@@ -205,9 +204,9 @@ const Projet = [
     id: 8,
     nom: "Quesne",
     année: "2022",
-    brief: "Dryade de nature pacifiste",
+    brief: "Nymphe guerrière",
     description:
-      "Dans un monde où les forêts se font de plus en plus rares, Quesne, dryade de nature pacifiste, décide de prendre les armes. Elle réveille les magies anciennes d'incantation et avec l'aide de ses sœurs, elle mène bataille pour restaurer cette nature qui court à sa perte.",
+      "Dans un monde où les forêts se font de plus en plus rares, Quesne, dryade pourtant de nature pacifiste, décide de prendre les armes. Elle réveille les magies anciennes d'incantation et avec l'aide de ses sœurs, elle mène bataille pour restaurer cette nature qui court à sa perte.",
     artiste: "Jade",
     imageCardUrl: "/assets/images/photoProjets/Quesne/quesne_post.jpg",
     charaUrl: "/assets/images/photoProjets/Quesne/quesne_charadesign.jpg",
@@ -224,6 +223,11 @@ const Projet = [
     visualisationUrl: [
       "/assets/images/photoProjets/Quesne/quesne_visu_1.jpg",
       "/assets/images/photoProjets/Quesne/quesne_visu_2.jpg",
+      "/assets/images/photoProjets/Quesne/quesne_visu_3.jpg",
+      "/assets/images/photoProjets/Quesne/quesne_visu_4.jpg",
+      "/assets/images/photoProjets/Quesne/quesne_visu_5.jpg",
+      "/assets/images/photoProjets/Quesne/quesne_visu_6.jpg",
+      "/assets/images/photoProjets/Quesne/quesne_visu_7.jpg",
     ],
     figurineUrl: [""],
     telechargementDispo: true,
@@ -233,8 +237,9 @@ const Projet = [
     id: 9,
     nom: "Pia",
     année: "2022",
-    brief: "",
-    description: "",
+    brief: "Prêtresse d’Hécate",
+    description:
+      "Pia est une jeune femme qui croit dur comme fer à Hécate. Elle lui voua sa vie. Au point de devenir un simple réceptacle, perdant petit a petit sa propre humanité.",
     artiste: "Maelle",
     imageCardUrl: "/assets/images/photoProjets/Pia/pia_post.jpg",
     charaUrl: "/assets/images/photoProjets/Pia/pia_charadesign.jpg",
@@ -310,7 +315,12 @@ const Projet = [
       "/assets/images/photoProjets/Eclypse/eclypse_inspi_1.jpg",
       "/assets/images/photoProjets/Eclypse/eclypse_inspi_2.jpg",
     ],
-    visualisationUrl: [],
+    visualisationUrl: [
+      "/assets/images/photoProjets/Eclypse/Eclypse_visu_1.jpg",
+      "/assets/images/photoProjets/Eclypse/Eclypse_visu_2.jpg",
+      "/assets/images/photoProjets/Eclypse/Eclypse_visu_3.jpg",
+      "/assets/images/photoProjets/Eclypse/Eclypse_visu_4.jpg",
+    ],
     figurineUrl: [""],
     telechargementDispo: true,
     fichierModel3dUrl: "",
@@ -319,7 +329,7 @@ const Projet = [
     id: 12,
     nom: "Fidodu",
     année: "2022",
-    brief: "",
+    brief: "Le dragon-dodo",
     description:
       "Le Fidodu est une espèce vivant en troupeau. Celle-ci se déplace dans les forêts des îles flottantes, en bordure de rivière. Il ne se nourris que de serpent à deux têtes. Sa tête de pioche lui permet de séparer les têtes du serpent afin d'attaquer en toute sécurité. Ces cornes sur son dos peuvent servir aux fées et elfes pour se poser comme sur une chaise, ainsi que pour transporter de sacs de marchandises. Cet être possède des sortes de tentacules sur sa queue pouvant s'allonger pour se défendre ou s'accrocher.",
     artiste: "Jade",
@@ -337,7 +347,7 @@ const Projet = [
     id: 13,
     nom: "Hadès",
     année: "2022",
-    brief: "",
+    brief: "Dieu des enfers",
     description:
       "Hadès le dieu des enfers, avec une volonté féroce de vouloir tout détruire sur son passage, hypérion le petit Titan en a aussi fait l'expérience. Où qu'il aille Hadès voudra toujours tout détruire pour son simple plaisir mais ne pourra jamais remplir sa soif de destruction.",
     artiste: "Guillaume",
