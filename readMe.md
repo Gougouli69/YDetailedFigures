@@ -5,12 +5,19 @@ Créer en 2021, les étudiant ont 2 semestres pour créer une ou plusieurs figur
 
 Ce répertoire contient le site vitrine du projet. Le site a pour but de présenter le projet et le travail réalisé par les étudiants.
 
+https://ydetailedfigures.ylab.fr/index.html
+
+![image](https://user-images.githubusercontent.com/99044194/236884612-c6f1059b-1b88-465c-aeaa-b1ed376cc595.png)
+
+
 ## Le projet
 
 Le Projet Y Detailed Figures à été lancé en 2021 par un groupe de 7 étudiants.
 L'objectif du projet est de modéliser des figurines en 3D pour les imprimer grâce à une imprimante 3D
 Y Detailed Figures s'inscrit dans le cadre des projet Ydays.
 Les étudiants ont donc le temps d'une année scolaire pour créer un concept art, le modéliser puis l'imprimer.
+
+![image](https://user-images.githubusercontent.com/99044194/236884287-060903c5-ae13-47b8-8322-c0d664eacb90.png)
 
 ## Le répertoire
 
