@@ -1,20 +1,71 @@
-Y Detailed Figures
+# Y Detailed Figures
 
-Le projet
+Y detailed Figures est un projet étudiant qui s'inscrit dans le cadre des Ydays Lyon.
+Créer en 2021, les étudiant ont 2 semestres pour créer une ou plusieurs figurines en 3D et les imprimer.
 
-Le dossier
+Ce répertoire contient le site vitrine du projet. Le site a pour but de présenter le projet et le travail réalisé par les étudiants.
 
-Mettre en prod
+## Le projet
+
+Le Projet Y Detailed Figures à été lancé en 2021 par un groupe de 7 étudiants.
+L'objectif du projet est de modéliser des figurines en 3D pour les imprimer grâce à une imprimante 3D
+Y Detailed Figures s'inscrit dans le cadre des projet Ydays.
+Les étudiants ont donc le temps d'une année scolaire pour créer un concept art, le modéliser puis l'imprimer.
+
+## Le répertoire
+
+- index.html : page d'accueil du site
+- aPorpos.html : page qui explique comment les ficgurines sont créées
+- projets.html : page qui répertorie toutes les projets
+- assets : contient tous fichiers annexes du projet
+  - consts : contient les fichiers de contantes (équipe et projets)
+  - fichiers : contient les fichiers pdf
+  - fonts : contient les polices du projets
+  - images : contient l'ensemble des images du projet
+- fonctions : contient les fichiers js qui servent au fonctionnement du projet
+- styles : contient les fichiers de style du projet
+
+## Ajouter un projet
+
+- aller dans le fichier de constante : `assets\consts\constsFigurines.js`
+
+- copier / coller l'exemple commenter :
+
+```
+Modéle de l'objet pour chaque projet
+{
+     "id"                    : 1,
+     "nom"                   : '', // Nom de la figurine
+     "année"                 : "", // Année de création
+     "brief"                 : '', // brève description
+     "description"           : '', //description compléte
+     "artiste"               : '', //artiste
+     "imageCardUrl"          : '', //photo presentation image card
+     "charaUrl"              : '', // lien image chara design
+     "inspiUrl"              : '', // lien image planche d'inspiration
+     "visualisationUrl"      : [''], //tableau de lien de rendu 3d
+     "figurineUrl"           : [''], //tableau de lien de photos de figurine réalisée
+     "telechargementDispo"   : true, // booléen - est-ce que l'artiste accepte que son projet soit télechargé
+     "fichierModel3dUrl"     : '' //lien vers le fichier du modèle 3D
+}
+```
+
+- remplir l'objet avec les données du projet
+- créer et remplir le dossier `assets\images\photoProjets\Nom_du_Projet`
+
+## Mettre en prod
 
 - se connecter au vpn d'Ynov
 
-- ouvrir un terminal avec cmd
-  se connecter en ssh : ssh fabweb@10.4.1.8
+- ouvrir un terminal
+- se connecter en ssh : `ssh fabweb@10.4.1.8`
 
-cd /var/www/ylab.fr/ ydetailedfigures.ylab.fr/
+- se déplacer dans le dossier `cd /var/www/ylab.fr/ydetailedfigures.ylab.fr/`
 
-vérifier que le .git existe (ls -la)
+- vérifier que le .git existe avec `ls -la`
 
-changer d'user pour fabclt (sudo su fabclt)
+- changer d'user pour fabclt `sudo su fabclt`
 
-git pull puis vérifier que le site est bien à jour
+- `git pull`
+
+- vérifier que le site est bien à jour
