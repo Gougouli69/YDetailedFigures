@@ -12,14 +12,23 @@ const dataFilter = data.filter((el) => el.année === annee);
 
 const dataProjet = annee ? dataFilter : data;
 
-// Créer une carte pour chaque objet de données
 dataProjet.forEach((item) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.backgroundColor = "#D9D9D9";
   card.style.textAlign = "center";
   card.style.width = "300px";
-  card.innerHTML = `<img src="${item.imageCardUrl}"id="card_image"><h2>${item.nom}</h2><p>${item.brief}</p>`;
+
+  // Créer un lien qui pointe vers card.html avec le nom du projet sélectionné comme paramètre d'URL
+  const link = document.createElement("a");
+  link.style.color = "black";
+  link.href = `card.html?nom=${encodeURIComponent(item.nom)}`;
+  link.style.textDecoration = "none";
+
+  // Ajouter le contenu de la carte à l'intérieur du lien
+  link.innerHTML = `<img src="${item.imageCardUrl}" id="card_image"><h2>${item.nom}</h2><p>${item.brief}</p>`;
+  card.appendChild(link);
+
   cardContainer.appendChild(card);
 });
 
