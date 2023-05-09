@@ -20,12 +20,12 @@ const Projet = [
     id: 1,
     nom: "Maraiche",
     année: "2021",
-    brief: " Un triton à queue de requin venue des profondeurs.",
-    description: " Un triton à queue de requin venue des profondeurs.",
+    brief: "Homme poisson très musclé",
+    description: "Un triton à queue de requin venue des profondeurs.",
     artiste: "Mazarine",
-    imageCardUrl: "/assets/images/photoProjets/Maraiche/maraiche_post.jpg",
-    charaUrl: "/assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg",
-    inspiUrl: "/assets/images/photoProjets/Maraiche/maraiche_inspi.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Maraiche/maraiche_post.jpg"],
+    charaUrl: ["/assets/images/photoProjets/Maraiche/maraiche_charadesign.jpg"],
+    inspiUrl: ["/assets/images/photoProjets/Maraiche/maraiche_inspi.jpg"],
     visualisationUrl: [
       "/assets/images/photoProjets/Maraiche/maraiche_visu_1.jpg",
       "/assets/images/photoProjets/Maraiche/maraiche_visu_2.jpg",
@@ -46,17 +46,17 @@ const Projet = [
     description:
       "Un alien humanoïde dans un style semi réaliste et de science-fiction.",
     artiste: "Ryan",
-    imageCardUrl: "/assets/images/photoProjets/Allarien/allarien_post.jpg",
-    charaUrl: "/assets/images/photoProjets/Allarien/allarien_charadesign_1.jpg",
-    inspiUrl: "/assets/images/photoProjets/Allarien/allarien_inspi.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Allarien/allarien_post.jpg"],
+    charaUrl: ["assets/images/photoProjets/Allarien/alarien_charadesign_1.jpg"],
+    inspiUrl: ["/assets/images/photoProjets/Allarien/allarien_inspi.jpg"],
     visualisationUrl: [
       "/assets/images/photoProjets/Allarien/allarien_post_2.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_1.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_2.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_3.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_4.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_5.jpg",
-      "/assets/images/photoProjets/Allarien/allarien_visu_6.jpg",
+      "/assets/images/photoProjets/Allarien/allarien_visu_1.png",
+      "/assets/images/photoProjets/Allarien/allarien_visu_2.png",
+      "/assets/images/photoProjets/Allarien/allarien_visu_3.png",
+      "/assets/images/photoProjets/Allarien/allarien_visu_4.png",
+      "/assets/images/photoProjets/Allarien/allarien_visu_5.png",
+      "/assets/images/photoProjets/Allarien/allarien_visu_6.png",
       "/assets/images/photoProjets/Allarien/allarien_visu_7.jpg",
       "/assets/images/photoProjets/Allarien/allarien_visu_8.jpg",
       "/assets/images/photoProjets/Allarien/allarien_visu_9.jpg",
@@ -75,14 +75,16 @@ const Projet = [
     description:
       "Lactour et Colly sont deux petits champignons partis explorer la forêt. Ils sont inspirés de vrai champignon, Lactour est inspiré d’un Lactaire Velour et Colly, d’un Collibye Visqueuse",
     artiste: "Mazarine",
-    imageCardUrl:
+    imageCardUrl: [
       "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_visu_1.jpg",
+    ],
     charaUrl: [
-      "/assets/images/photoProjets/Lactouretcolly/colly_charadesign.jpg",
+      "/assets/images/photoProjets/LactourEtColly/colly_charadesign.jpg",
       "/assets/images/photoProjets/Lactouretcolly/lactour_charadesign.jpg",
     ],
-    inspiUrl:
+    inspiUrl: [
       "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_inspi.jpg",
+    ],
     visualisationUrl: [
       "/assets/images/photoProjets/LactourEtColly/colly_visu_1.jpg",
       "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_visu_1.jpg",
@@ -100,13 +102,13 @@ const Projet = [
     brief: "Un singe japonais",
     description: "Un singe anthropomorphe japonais qui porte du streetwear.",
     artiste: "Nicolas",
-    imageCardUrl: "/assets/images/photoProjets/Monke/monke_post.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Monke/monke_post.jpg"],
     charaUrl: [
       "/assets/images/photoProjets/Monke/monke_charadesign_1.jpg",
       "/assets/images/photoProjets/Monke/monke_charadesign_2.jpg",
       "/assets/images/photoProjets/Monke/monke_charadesign_3.jpg",
     ],
-    inspiUrl: "/assets/images/photoProjets/Monke/monke_charadesign.jpg",
+    inspiUrl: ["/assets/images/photoProjets/Monke/monke_charadesign.jpg"],
     visualisationUrl: [
       "/assets/images/photoProjets/Monke/monke_visu_1.jpg",
       "/assets/images/photoProjets/Monke/monke_visu_2.jpg",
@@ -128,7 +130,7 @@ const Projet = [
     brief: "Le duo humoristique d’un dodo et d’un cavalier canard",
     description: "Un canard anthropomorphe chevauchant son fidèle dodo, Oinc !",
     artiste: "Mathias",
-    imageCardUrl: "/assets/images/photoProjets/Oinc/oinc_post.png",
+    imageCardUrl: ["/assets/images/photoProjets/Oinc/oinc_post.png"],
     charaUrl: "",
     inspiUrl: [
       "/assets/images/photoProjets/Oinc/oinc_inspi.jpg",
@@ -152,9 +154,9 @@ const Projet = [
     description:
       "La SSM est un mecha destiné à la recherche spatial sur la planète Mars.",
     artiste: "Tristan",
-    imageCardUrl: "/assets/images/photoProjets/Ssm/ssm_post.jpg",
-    charaUrl: "/assets/images/photoProjets/Ssm/ssm_charadesign.jpg",
-    inspiUrl: "/assets/images/photoProjets/Ssm/ssm_inspi.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Ssm/ssm_post.jpg"],
+    charaUrl: ["/assets/images/photoProjets/Ssm/ssm_charadesign.jpg"],
+    inspiUrl: ["/assets/images/photoProjets/Ssm/ssm_inspi.jpg"],
     visualisationUrl: [
       "/assets/images/photoProjets/Ssm/ssm_visu_1.jpg",
       "/assets/images/photoProjets/Ssm/ssm_visu_2.jpg",
@@ -174,18 +176,18 @@ const Projet = [
     description:
       "Le personnage que nous suivons dans cette histoire s'appelle Hypérion, surnommé le petit Titan le fis d'Ouranos et de Gaïa dans sa vie passée, Hypérion, mener une vie paisible dans les cieux, jusqu'à un beau jour où hadès le dieu des enfers le scella dans un corps humain pour pas qu'il n'interfère dans son plan de conquête des cieux. dans un élan de rage et de vengeance Hypérion prie les armes, et commenca son aventure jusqu' aux enfers pour affronter Lucifer accompagner de son fidèle compagnon, pour récupérer son corps de Titan. ",
     artiste: "Guillaume",
-    imageCardUrl: "/assets/images/photoProjets/Hyperion/hyperion_post.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Hyperion/hyperion_post.jpg"],
     charaUrl: [
       "/assets/images/photoProjets/Hyperion/hyperion_charadesign_1.png",
       "/assets/images/photoProjets/Hyperion/hyperion_charadesign_2.jpg",
       "/assets/images/photoProjets/Hyperion/hyperion_charadesign_3.png",
     ],
     inspiUrl: [
-      "/assets/images/photoProjets/Hyperion/hyperion_inspi_1.jpg",
-      "/assets/images/photoProjets/Hyperion/hyperion_inspi_2.jpg",
-      "/assets/images/photoProjets/Hyperion/hyperion_inspi_3.jpg",
-      "/assets/images/photoProjets/Hyperion/hyperion_inspi_4.jpg",
-      "/assets/images/photoProjets/Hyperion/hyperion_inspi_5.jpg",
+      "/assets/images/photoProjets/Hyperion/hyperion_inspi_1.png",
+      "/assets/images/photoProjets/Hyperion/hyperion_inspi_2.png",
+      "/assets/images/photoProjets/Hyperion/hyperion_inspi_3.png",
+      "/assets/images/photoProjets/Hyperion/hyperion_inspi_4.png",
+      "/assets/images/photoProjets/Hyperion/hyperion_inspi_5.png",
     ],
     visualisationUrl: [
       "/assets/images/photoProjets/Hyperion/hyperion_visu_1.jpg",
@@ -210,8 +212,8 @@ const Projet = [
     description:
       "Dans un monde où les forêts se font de plus en plus rares, Quesne, dryade pourtant de nature pacifiste, décide de prendre les armes. Elle réveille les magies anciennes d'incantation et avec l'aide de ses sœurs, elle mène bataille pour restaurer cette nature qui court à sa perte.",
     artiste: "Jade",
-    imageCardUrl: "/assets/images/photoProjets/Quesne/quesne_post.jpg",
-    charaUrl: "/assets/images/photoProjets/Quesne/quesne_charadesign.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Quesne/quesne_post.jpg"],
+    charaUrl: ["/assets/images/photoProjets/Quesne/quesne_charadesign.jpg"],
     inspiUrl: [
       "/assets/images/photoProjets/Quesne/quesne_inspi_1.jpg",
       "/assets/images/photoProjets/Quesne/quesne_inspi_2.jpg",
@@ -243,9 +245,9 @@ const Projet = [
     description:
       "Pia est une jeune femme qui croit dur comme fer à Hécate. Elle lui voua sa vie. Au point de devenir un simple réceptacle, perdant petit a petit sa propre humanité.",
     artiste: "Maelle",
-    imageCardUrl: "/assets/images/photoProjets/Pia/pia_post.jpg",
-    charaUrl: "/assets/images/photoProjets/Pia/pia_charadesign.jpg",
-    inspiUrl: "/assets/images/photoProjets/Pia/pia_inspi.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Pia/pia_post.jpg"],
+    charaUrl: ["/assets/images/photoProjets/Pia/pia_charadesign.jpg"],
+    inspiUrl: ["/assets/images/photoProjets/Pia/pia_inspi.jpg"],
     visualisationUrl: [
       "/assets/images/photoProjets/Pia/pia_visu_1.jpg",
       "/assets/images/photoProjets/Pia/pia_visu_2.jpg",
@@ -262,7 +264,7 @@ const Projet = [
     description:
       "Une anthropomorphe renarde qui décide d'étudier la magie de la glace, cristaux pour les maîtriser ",
     artiste: "Fanny",
-    imageCardUrl: "/assets/images/photoProjets/Foxia/foxia_post.jpg",
+    imageCardUrl: ["/assets/images/photoProjets/Foxia/foxia_post.jpg"],
     charaUrl: [
       "/assets/images/photoProjets/Foxia/foxia_charadesign_1.jpg",
       "/assets/images/photoProjets/Foxia/foxia_charadesign_2.jpg",
