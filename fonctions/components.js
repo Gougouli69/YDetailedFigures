@@ -1,18 +1,14 @@
 // Appel de la fonction init_client_duels au après chargement de la page
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Exécution du code après chargement de la page");
   var urlcourante = document.location.href;
-  console.log(urlcourante);
   switch (true) {
     case urlcourante.includes(2021):
-      console.log("init 2021");
       initPage2021();
       break;
     case urlcourante.includes(2022):
       initPage2022();
       break;
-    case urlcourante.includes(projets):
-      initPageProjet();
+    default:
       break;
   }
 });
@@ -39,10 +35,8 @@ function initPage2022() {
 
 function afficheEquipe(arr) {
   const cardField = document.getElementById("grid-equipe");
-  console.log(cardField);
 
   arr.forEach((el) => {
-    console.log(el);
     cardField.innerHTML +=
       '<div class="col card-container" >' +
       '<div class="col card-equipe">' +
