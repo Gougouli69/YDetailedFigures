@@ -38,21 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
       openModal(title);
     });
   });
+
   fieldProjetsListe.forEach((cardPorjetField) => {
     cardPorjetField.addEventListener("click", function () {
       let title = cardPorjetField.querySelector("h2").textContent;
-      openModal(title);
+      // openModal(title);
+      window.location.href = "/detailProjet.html?nom=" + title;
     });
   });
 });
-
-// let fieldCloseModal = document.getElementById("modal-close");
-// console.log("field CLOSE MODALE" + fieldCloseModal);
-
-// fieldCloseModal.addEventListener("click", function () {
-//   console.log("close modale");
-//   closeModal();
-// });
 
 function closeModal() {
   console.log("close modale");
@@ -98,6 +92,11 @@ function afficheModalProjet(projet) {
     "<p>" +
     projet.description +
     "</p>" +
+    '<button class="lien-details projet"  onclick="window.location.href=\'/detailProjet.html?nom=' +
+    projet.nom +
+    "'\">" +
+    "Voir le projet en détails" +
+    "</button>" +
     "</div>" +
     "</div>" +
     '<div class="modal close" id="modal-close"> ' +

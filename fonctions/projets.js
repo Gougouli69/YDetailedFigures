@@ -64,43 +64,43 @@ dataProjet.forEach((list) => {
   compt++;
 });
 
-let ProjectFilter = Projet.filter((el) => el.telechargementDispo === true);
-const listModele = document.querySelector("#list-modele");
-ProjectFilter.forEach((list) => {
-  if (compt % 2 == 0) {
-    listModele.innerHTML += `
-          <div class="lists_item_left">
-              <div class="list"><img src="${
-                list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
-              }" alt="${
-      list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
-    }"class="list_image"></div>
-              <div class="list_content_left">
-              <h2 class="list_title">${list.nom}</h2>
-              <p class="list_text">${list.brief}</p>
-              <p class="list_year">${list.année}</p>
-              <p class="list_artist">${list.artiste}</p>
-              <p class="list_description_left">${list.description}</p>
-              </div>
-          </div>
-      `;
-  } else {
-    listModele.innerHTML += `
-          <div class="lists_item_1">
-          <div class="list_content_right">
-              <h2 class="list_title">${list.nom}</h2>
-              <p class="list_text">${list.brief}</p>
-              <p class="list_year">${list.année}</p>
-              <p class="list_artist">${list.artiste}</p>
-              <p class="list_description_right">${list.description}</p>
-              </div>
-              <div class="list"><img src="${
-                list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
-              }" alt="${
-      list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
-    }"class="list_image"></div>
-          </div>
-      `;
-  }
-  compt++;
-});
+// let ProjectFilter = Projet.filter((el) => el.telechargementDispo === true);
+// const listModele = document.querySelector("#list-modele");
+// ProjectFilter.forEach((list) => {
+//   if (compt % 2 == 0) {
+//     listModele.innerHTML += `
+//           <div class="lists_item_left">
+//               <div class="list"><img src="${
+//                 list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
+//               }" alt="${
+//       list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
+//     }"class="list_image"></div>
+//               <div class="list_content_left">
+//               <h2 class="list_title">${list.nom}</h2>
+//               <p class="list_text">${list.brief}</p>
+//               <p class="list_year">${list.année}</p>
+//               <p class="list_artist">${list.artiste}</p>
+//               <p class="list_description_left">${list.description}</p>
+//               </div>
+//           </div>
+//       `;
+//   } else {
+//     listModele.innerHTML += `
+//           <div class="lists_item_1">
+//           <div class="list_content_right">
+//               <h2 class="list_title">${list.nom}</h2>
+//               <p class="list_text">${list.brief}</p>
+//               <p class="list_year">${list.année}</p>
+//               <p class="list_artist">${list.artiste}</p>
+//               <p class="list_description_right">${list.description}</p>
+//               </div>
+//               <div class="list"><img src="${
+//                 list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
+//               }" alt="${
+//       list.imageCardUrl ? list.imageCardUrl : urlImageDefaut
+//     }"class="list_image"></div>
+//           </div>
+//       `;
+//   }
+//   compt++;
+// });
