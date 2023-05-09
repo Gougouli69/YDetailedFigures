@@ -1,10 +1,7 @@
 const data = Projet;
 const url = window.location.href;
-console.log("URL complète : " + url);
 var parametres = window.location.search;
-console.log("Paramètres : " + parametres);
 const annee = url.split("annee=")[1];
-console.log(annee);
 
 const cardContainer = document.querySelector(".card-container");
 
