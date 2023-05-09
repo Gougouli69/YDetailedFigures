@@ -192,6 +192,11 @@ margin: auto;
   cursor: pointer;
 }
 
+.nav-link-projet{
+  color: #FFFFFF;
+  right: 0;
+}
+
 /* .modal h2{
   background-color: white;
   padding: 20px;
