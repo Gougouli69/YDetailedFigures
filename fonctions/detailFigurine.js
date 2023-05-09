@@ -15,13 +15,14 @@ briefElement.textContent = cardData.brief;
 descriptionElement.textContent = cardData.description;
 artisteElement.textContent = cardData.artiste;
 dateElement.textContent = cardData.année;
-
+console.log(cardData);
 const imageElement = document.getElementById("card-image");
 imageElement.innerHTML = `<img class="imgcard" src="${cardData.imageCardUrl}" width="70%">`;
 
 const charaElement = document.getElementById("CharaDesign");
 let imagesHtmla = "";
-if (cardData.charaUrl.length >= 1) {
+
+if (cardData.charaUrl.length >= 1 && typeof cardData.charaUrl != "string") {
   for (let i = 0; i < cardData.charaUrl.length; i++) {
     const img = new Image();
     img.onload = () => {
@@ -36,7 +37,7 @@ if (cardData.charaUrl.length >= 1) {
 
 const inspirationElement = document.getElementById("Inspiration");
 let imagesHtmlb = "";
-if (cardData.inspiUrl.length >= 1) {
+if (cardData.inspiUrl.length >= 1 && typeof cardData.inspiUrl != "string") {
   for (let i = 0; i < cardData.inspiUrl.length; i++) {
     const img = new Image();
     img.onload = () => {
@@ -51,7 +52,10 @@ if (cardData.inspiUrl.length >= 1) {
 
 const visualisationElement = document.getElementById("Visualisation");
 let imagesHtmlc = "";
-if (cardData.visualisationUrl.length >= 1) {
+if (
+  cardData.visualisationUrl.length >= 1 &&
+  typeof cardData.visualisationUrl != "string"
+) {
   for (let i = 0; i < cardData.visualisationUrl.length; i++) {
     const img = new Image();
     img.onload = () => {
