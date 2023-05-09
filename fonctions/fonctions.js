@@ -92,10 +92,10 @@ function afficheModalProjet(projet) {
     "<p>" +
     projet.description +
     "</p>" +
-    '<button class="lien-details projet">' +
-    '<a class="nav-link-projet" href="/detailProjet.html?nom=' +
+    '<button class="lien-details projet"  onclick="window.location.href=\'/detailProjet.html?nom=' +
     projet.nom +
-    '">Voir le projet en détails</a>' +
+    "'\">" +
+    "Voir le projet en détails" +
     "</button>" +
     "</div>" +
     "</div>" +
