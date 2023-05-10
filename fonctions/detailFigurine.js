@@ -59,7 +59,7 @@ if (
   for (let i = 0; i < cardData.visualisationUrl.length; i++) {
     const img = new Image();
     img.onload = () => {
-      imagesHtmlc += `<img src="${cardData.visualisationUrl[i]}" width="50%">`;
+      imagesHtmlc += `<img class="visu" src="${cardData.visualisationUrl[i]}" width="50%">`;
       visualisationElement.innerHTML = imagesHtmlc;
     };
     img.src = cardData.visualisationUrl[i];
