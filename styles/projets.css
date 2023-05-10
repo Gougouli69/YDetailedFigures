@@ -68,7 +68,7 @@ figure {
   /* Team card ========== */
   .card-equipe{
     max-width: 200px;
-    background-color: rgba(196, 196, 196, 0.05);
+    background-color: rgba(204, 201, 201, 100);
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
     margin-bottom: 25px;
     margin: 30px;
