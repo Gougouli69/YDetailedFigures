@@ -83,7 +83,7 @@ const Projet = [
       "/assets/images/photoProjets/Lactouretcolly/lactour_charadesign.jpg",
     ],
     inspiUrl: [
-      "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_inspi.jpg",
+      "/assets/images/photoProjets/LactourEtColly/lactour_et_colly_inspi.png",
     ],
     visualisationUrl: [
       "/assets/images/photoProjets/LactourEtColly/colly_visu_1.jpg",
