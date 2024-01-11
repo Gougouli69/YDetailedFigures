@@ -1,0 +1,70 @@
+header {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    background-color: #E09108;
+    box-shadow: 0px 2px 5px rgba(00, 00, 00, 0.5);
+}
+
+header .logo-wrapper {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+header .logo-wrapper:hover {
+    transform: scale(1.1, 1.1);
+}
+
+header .logo-wrapper>img {
+    height: 50px;
+    filter: drop-shadow(-2px 0px 5px rgba(255, 255, 255, 0.5))
+}
+
+header .tabs-list {
+    display: flex;
+    gap: 50px;
+    margin-right: 15px;
+    height: fit-content;
+    font-size: 20px;
+    list-style: none;
+    color: #ffffff;
+}
+
+header .tab-item {
+    position: relative;
+    cursor: pointer;
+}
+
+header .tab-item:not([id="3D_models"]):after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: -4px;
+    transform: scaleX(0);
+    background: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+header .tab-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header .tab-item:hover {
+    border-color: #ffffff;
+}
+
+/*
+DEACTIVATE 3D MODELS (STILL UNDER DEVELOPMENT)
+*/
+
+[id="3D_models"] p {
+    color:rgba(0,0,0,0.25);
+    pointer-events: none;
+}

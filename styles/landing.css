@@ -1,0 +1,256 @@
+:root {
+    --main-color-2021: #E09108;
+    --main-color-2022: #9A00C4;
+    --main-color-2023: #A60303;
+    --main-color-background: #292929;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+main {
+    position:relative;
+    background-color: var(--main-color-background);
+    color: #ffffff;
+    overflow:hidden;
+}
+
+.background-image {
+    position:relative;
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+
+.background-image img {
+    position: absolute;
+    top: -500;
+    left: 0;
+    opacity: 0;
+    animation: displayCaroussel 8s infinite;
+}
+
+.background-image img:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.background-image img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.background-image img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes displayCaroussel {
+    0%{
+        transform:translateX(100%);
+        opacity:0;
+    }
+
+    20%{
+        transform:translateX(0);
+        opacity:1;
+    }
+    50%{
+        transform:translateX(0);
+        opacity:0;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 50px;
+}
+
+section h3 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.description h3 span {
+    color: var(--main-color-2021);
+}
+
+.description p {
+    max-width: 75%;
+    line-height: 120%;
+    white-space: nowrap;
+}
+
+.btn-more,
+.btn-3d_models {
+    padding: 10px;
+    border: solid 1px var(--main-color-2021);
+    border-radius: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+.btn-more:hover,
+.btn-3d_models:hover {
+    background-color: var(--main-color-2021);
+    color: #ffffff;
+}
+
+.projects-examples-list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 200px;
+    width:200px;
+    padding: 15px;
+    overflow:hidden;
+}
+
+.projects-examples-list img {
+    position: absolute;
+    left: calc(50%-100px);
+    max-height: 200px;
+    border-radius:10px;
+    opacity: 0;
+    animation: displayProjects 10s infinite;
+}
+
+.projects-examples-list img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.projects-examples-list img:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.projects-examples-list img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.projects-examples-list img:nth-child(5) {
+    animation-delay: 8s;
+}
+
+@keyframes displayProjects {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+.btn-projects {
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 150px;
+    height: 20px;
+    border: solid 1px var(--main-color-2021);
+    border-radius: 8px;
+    background-color: var(--main-color-background);
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.5s ease-in;
+}
+
+.btn-projects:hover {
+    background-color: var(--main-color-2021);
+    color: #ffffff;
+}
+
+.hover-background {
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:25px;
+    transition: 0.5s ease-in;
+}
+
+.projects-examples-list:hover .hover-background {
+    opacity: 1;
+}
+
+.projects-examples-list:hover .btn-projects {
+    opacity: 1;
+}
+
+.disabled{
+    color:rgba(0, 0, 0, 0.25);
+    border:solid 1px rgba(0,0,0,0.25);
+    pointer-events: none;
+}
+
+/* TODO FIX ARROW STICKY CORNER LEFT BOTTOM + DON'T GO TROUGH FOOTER*/
+
+.arrow-to-top {
+    z-index: 5;
+    cursor: pointer;
+    position: sticky;
+    bottom: 75px;
+    left:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.arrow-to-top span {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.arrow-to-top:hover {
+    background-color: #ffffff;
+}
+
+.arrow-to-top:hover span {
+    color: var(--main-color-background);
+}

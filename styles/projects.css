@@ -1,0 +1,180 @@
+:root {
+    --main-color-2021: #E09108;
+    --main-color-2022: #9A00C4;
+    --main-color-2023: #A60303;
+    --main-color-background: #292929;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body{
+    position:relative;
+}
+.hidden {
+    display: none;
+}
+
+main {
+    height: 100%;
+    background-color: var(--main-color-background);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section h3 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    min-width: 400px;
+    border: solid 1px #ffffff;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.searchbar img {
+    cursor: pointer;
+}
+
+#searchbar {
+    width: 90%;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+}
+
+#searchbar:focus {
+    outline: none;
+}
+
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-item {
+    padding: 10px;
+    border: solid 1px #FFFFFF;
+    border-radius: 20px;
+    transition: 0.25s ease-in-out;
+    color: #ffffff;
+    opacity: 0.75;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-item#year-2021:hover {
+    border: solid 1px var(--main-color-2021);
+    color: var(--main-color-2021);
+}
+
+.filter-item#year-2022:hover {
+    border: solid 1px var(--main-color-2022);
+    color: var(--main-color-2022);
+}
+
+.filter-item#year-2023:hover {
+    border: solid 1px var(--main-color-2023);
+    color: var(--main-color-2023);
+}
+
+.filter-item.selected {
+    opacity: 1;
+}
+
+.filter-item.selected#year-2021 {
+    border: solid 1px var(--main-color-2021);
+    color: var(--main-color-2021);
+}
+
+.filter-item.selected#year-2022 {
+    border: solid 1px var(--main-color-2022);
+    color: var(--main-color-2022);
+}
+
+.filter-item.selected#year-2023 {
+    border: solid 1px var(--main-color-2023);
+    color: var(--main-color-2023);
+}
+
+.project-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap:25px;
+}
+
+.project {
+    cursor:pointer;
+    height: 250px;
+    width: 250px;
+    border: solid 1px transparent;
+    border-radius: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s ease-in;
+    overflow: hidden;
+}
+
+.project:hover{
+    transform:scale(1.02);
+}
+
+.arrow-to-top {
+    z-index:5;
+    cursor:pointer;
+    position:sticky;
+    bottom: 75px;
+    left: 20px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:25px;
+    width:25px;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    box-shadow:0px 0px 1px 1px rgba(0,0,0,0.5);
+    transition:0.2s;
+}
+
+.arrow-to-top span{
+    font-size:18px;
+    color: #ffffff;
+}
+
+.arrow-to-top:hover{
+    background-color:#ffffff;
+}
+
+.arrow-to-top:hover span{
+    color:var(--main-color-background);
+}
