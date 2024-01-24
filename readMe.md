@@ -22,43 +22,20 @@ Les étudiants ont donc le temps d'une année scolaire pour créer un concept ar
 ## Le répertoire
 
 - index.html : page d'accueil du site
-- aPorpos.html : page qui explique comment les ficgurines sont créées
-- projets.html : page qui répertorie toutes les projets
-- assets : contient tous fichiers annexes du projet
-  - consts : contient les fichiers de contantes (équipe et projets)
-  - fichiers : contient les fichiers pdf
+- projects.html : page qui contient tous les projets
+- teams.html : page qui contients tous les membres qui ont contribué au projet
+- assets : contient tous les fichiers annexes du projet
+  - appstructs : contient les structures et informations d'équipes et de projets
+  - fichiers : contient les fichiers pdf téléchargeables
   - fonts : contient les polices du projets
-  - images : contient l'ensemble des images du projet
-- fonctions : contient les fichiers js qui servent au fonctionnement du projet
+  - img : contient l'ensemble des images du projet
+  -icons : contient les icônes du projet
+- script : contient les fichiers js qui servent au fonctionnement du projet
 - styles : contient les fichiers de style du projet
 
-## Ajouter un projet
+## Mise à jour
 
-- aller dans le fichier de constante : `assets\consts\constsFigurines.js`
-
-- copier / coller l'exemple commenter :
-
-```
-Modéle de l'objet pour chaque projet
-{
-     "id"                    : 1,
-     "nom"                   : '', // Nom de la figurine
-     "année"                 : "", // Année de création
-     "brief"                 : '', // brève description
-     "description"           : '', //description compléte
-     "artiste"               : '', //artiste
-     "imageCardUrl"          : '', //photo presentation image card
-     "charaUrl"              : '', // lien image chara design
-     "inspiUrl"              : '', // lien image planche d'inspiration
-     "visualisationUrl"      : [''], //tableau de lien de rendu 3d
-     "figurineUrl"           : [''], //tableau de lien de photos de figurine réalisée
-     "telechargementDispo"   : true, // booléen - est-ce que l'artiste accepte que son projet soit télechargé
-     "fichierModel3dUrl"     : '' //lien vers le fichier du modèle 3D
-}
-```
-
-- remplir l'objet avec les données du projet
-- créer et remplir le dossier `assets\images\photoProjets\Nom_du_Projet`
+Accéder au [guide](./guide.md) pour effectuer des mises à jour sur le site.
 
 ## Mettre en prod
 
