@@ -4,7 +4,7 @@ footer {
     align-items: center;
     padding: 10px 20px;
     height: 50px;
-    background-color: #E09108;
+    background-color: var(--primary-color);
     box-shadow: 0px 2px 5px rgba(00, 00, 00, 0.5);
 }
 
@@ -22,23 +22,23 @@ footer .logo-wrapper>img {
     filter: drop-shadow(-2px 0px 5px rgba(255, 255, 255, 0.5))
 }
 
-footer p{
-    color:#ffffff;
+footer p {
+    color: #ffffff;
 }
 
-footer .social-media-wrapper{
-    display:flex;
-    align-items:center;
-    gap:15px;
+footer .social-media-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 footer .instagram_Logo img,
-footer .artStation_Logo img{
-    height:25px;
+footer .artStation_Logo img {
+    height: 25px;
     transition: .2s ease-in-out;
 }
 
 footer .instagram_Logo img:hover,
-footer .artStation_Logo img:hover{
-    transform:scale(1.1,1.1)
+footer .artStation_Logo img:hover {
+    transform: scale(1.1, 1.1)
 }
