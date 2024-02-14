@@ -24,7 +24,8 @@ Le fichier comprenant les informations sur les projets se trouve dans le dossier
 
 Dans le fichier projects.js, vous allez retrouver des structures comme ci-dessous :
 
-   `{
+   ```
+{
        name: "",
        year: "",
        conceptArt: \[""\],
@@ -34,7 +35,8 @@ Dans le fichier projects.js, vous allez retrouver des structures comme ci-dessou
        thumbnail: "./assets/img/projects/NomDeLaFigurine/NomDuFichier",
        img: \["./assets/img/projects/NomDeLaFigurine/NomDuFichier"\],
        size:"",
-   },`
+   },
+```
 
 Pour ajouter un nouveau projet, copiez cet example et collez le entre le crochet et l'accolade fermante à la fin du fichier. Attention a ne pas oublier la virgule après l'accolade fermante et toujours mettre les informations dans les guillemets lorsqu'elles sont présentes.Si plusieurs personnes ont participé au concept-art ou a la modélisation, ajoutez une virgule après les guillemets et écrivez les autres noms entre guillemets.
 
@@ -56,7 +58,8 @@ Ensuite remplissez les informations en fonction des paramètres suivants :
 
 Dans le fichier members.js, vous allez retrouver des structures comme ci-dessous :
 
-   `{
+   ```
+{
        year: \[""\],
        name: "",
        role: "",
@@ -67,7 +70,8 @@ Dans le fichier members.js, vous allez retrouver des structures comme ci-dessous
        github: "",
        img: "./assets/img/members/NomDuFichier",
        isLeader: \[""\],
-   },`
+   },
+```
 
 Pour ajouter un nouveau membre, copiez cet example et collez le entre le crochet et l'accolade fermante à la fin du fichier. Attention a ne pas oublier la virgule après l'accolade fermante et toujours mettre les informations dans les guillemets lorsqu'elles sont présentes. Si une information n'est pas fournie, laisser les guillemets vides et sans espaces.
 
