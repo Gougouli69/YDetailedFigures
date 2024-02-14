@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const YearsWrapper = document.querySelector(".filter-wrapper");
         let YearsHTML = '';
         years.forEach(year => {
-            YearsHTML += `<div class="filter-item selected" id="year-${year}">${year}</div>`
+            YearsHTML += `<div class="filter-item selected" id="year-${year}" style="border:solid 1px var(--year-${year});color:var(--year-${year});">${year}</div>`
         });
         YearsWrapper.innerHTML = YearsHTML;
     }
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
         //TODO Search by projects
         const searchbar = document.querySelector("#searchbar");
 
-        searchbar.addEventListener("input", function(){
+        searchbar.addEventListener("input", function () {
             const searchedText = searchbar.value.trim().toLowerCase();
             let result = "";
             resultByName = projects.filter(project => project.name.toLowerCase().includes(searchedText))
-            resultByArtist=[];
+            resultByArtist = [];
             projects.forEach(project => {
-                if(project.artist.toLowerCase().includes(searchedText)){
+                if (project.artist.toLowerCase().includes(searchedText)) {
                     resultByArtist.push(project)
                 }
             })
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let projectHTML = ``;
         console.log(projects)
         projects.forEach(project => {
-            const {thumbnail, name} = project;
-            projectHTML +=`<div class="project" data-name="${name}" style="background-image:url(${thumbnail})"></div>`;
+            const { thumbnail, name } = project;
+            projectHTML += `<div class="project" data-name="${name}" style="background-image:url(${thumbnail})"></div>`;
         });
         projectWrappper.innerHTML = projectHTML;
     }

@@ -7,7 +7,7 @@ const Projects = [
     //     isDownloadable: true,            // Téléchargeable ou non
     //     thumbnail: "",                   // Miniature de la figurine (image principale)
     //     img: ["", ""],                   // Images de la figurine
-    // }
+    // },
     {
         name: "Maraiche",
         year: "2021",
@@ -136,6 +136,34 @@ const Projects = [
         desc: "Hadès le dieu des enfers, avec une volonté féroce de vouloir tout détruire sur son passage, hypérion le petit Titan en a aussi fait l'expérience. Où qu'il aille Hadès voudra toujours tout détruire pour son simple plaisir mais ne pourra jamais remplir sa soif de destruction.",
         isDownloadable: true,
         thumbnail: "./assets/img/projects/Hades/hades_charadesign_1.png",
+        img: ["", ""],
+    },
+    {
+        name: "Daffy & Candy",
+        year: "2023",
+        artist: ["Guilet Fanny", "Azzouz-Genet Yaniss"],
+        theme: "Cirque d'horreur",
+        desc: "Hadès le dieu desDaffy et Candy sont un couple de clown très amoureux. Un soir, le présentateur fend la bouche de Candy car elle ne sourit jamais pendant les spectacles. Daffy essaie de consoler Candy et celle-ci le poignarde dans un accès de rage et de folie. Daffy devient un esprit qui hante Candy.",
+        isDownloadable: true,
+        thumbnail: "./assets/img/projects/DaffyEtCandy/",
+        img: ["", ""],
+    },
+    {
+        name: "Jojo la marionnette",
+        year: "2023",
+        artist: ["Nury Thaïs", "Patte May-Lee"],
+        desc: "C’est l'histoire d'un petit garçon du nom de Jonathan. Il se murmure que lui et son père seraient allés visiter le cirque sombre et l'enfant aurait suivi le son de la musique du chausse trappe posé sur le stand de barbe à papa roulant. Alors il disparait et on ne l'a jamais retrouvé. Mais depuis ce jour, le chausse trap a gagné un avatar qui aime manger des barbes à papa. Par la suite, d'autres enfants auraient disparu et n'auraient pas été retrouvés, tout comme le petit Jonathan.",
+        isDownloadable: true,
+        thumbnail: "./assets/img/projects/Jojo/",
+        img: ["", ""],
+    },
+    {
+        name: "Léon le lion",
+        year: "2023",
+        artist: ["Guillaume Merfent"],
+        desc: "Léon était un nourrisson quand il a intégré ce cirque. Il s'y sentait bien, il avait trouvé une famille qui lui convenait avec des hobbys à ne pas s'en plaindre, il menait une vie confortable. Malheureusement, le cirque mourut et resta à l'abandon, mais pour notre ami Léon, son esprit resta au sein du cirque et hanta ces lieux même après sa mort, jusqu'à ce qu'il ait un public qui le reconnu en tant que vrai lion de cirque.",
+        isDownloadable: true,
+        thumbnail: "./assets/img/projects/Leon/",
         img: ["", ""],
     },
 ]
