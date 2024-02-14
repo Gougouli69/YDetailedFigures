@@ -2,6 +2,19 @@
 
 Grâce à ce guide, vous allez pouvoir modifier les informations, couleurs ou textes présents sur le site.
 
+Pour pouvoir effectuer des changements sur le projet, vous allez devoir vous connecter sur le compte YDetailedFigures. Ensuite rendez-vous sur le fichier que vous souhaitez modifier et cliquez sur le crayon comme indiqué ci-dessous.
+
+[!Github edit btn]()
+
+Une fois les modifications effectuées, vérifiez bien que vous n'ayez pas modifié quelque chose involontairement et cliquez sur le bouton "commit changes".
+
+A ce moment, une pop-up va s'ouvrir. Dans le zone de texte "commit message", écrivez succinctement et en anglais une description des modifications apportées, par exemple "add members 2024". Vous pouvez également écrire une description plus longue dans la zone de texte "Extended description" mais cela reste facultatif.
+Ensuite cliquez sur le bouton "Commit changes".
+
+[!Github commit pop-up]()
+
+Vos changements sont effectués mais vous ne les voyez pas sur le site ? C'est tout à fait normal. Pour cela référez-vous à la section **Mise en ligne du site**.
+
 ## Mise à jour des projets et membres
 
 Le fichier comprenant les informations sur les projets se trouve dans le dossier 'assets' puis dans le dossier 'appstructs'.
@@ -69,6 +82,8 @@ Ensuite remplissez les informations en fonction des paramètres suivants :
 - img qui correspond à l'image du membre
 - isLeader qui correspond à l'année ou le/la membre était chef de projet
 
+Si un membre était déjà présent une autre année, la structure de ses données existe déjà. Dans ce cas, vous allez devoir trouver sa structure et ensuite modifier les informations présentes. Pour ajouter une année, il vous suffit d'ajouter entre les guillemets et le crochet déjà présent une virgule et l'année entre guillemets. Si vous n'êtes pas sûr de la syntaxe, prenez exemple sur les autres déjà présents.
+
 ## Mise à jour des couleurs
 
 Pour changer les couleurs du site, vous allez devoir aller dans le fichier colors.css situé dans le dossier 'common' qui est lui-même dans le dossier 'styles'. Toutes les couleurs resteront en format hexadecimal (un # puis 6 chiffres/lettres entre 0-9 et a-f). Vous pouvez ajouter deux chiffres/lettres dans le meme format que le reste pour inclure la transparence.
@@ -83,3 +98,10 @@ Les couleurs changeables sont :
 - La couleur du texte (text-color)
 
 En cas d'ajout de couleur pour les nouvelles années, il suffit d'ajouter une ligne comme les autres (--year-20XX:) et d'ajouter la couleur a la suite. L'attribution de la couleur se fera toute seule pour le reste.
+
+## Enregistrement des informations sur le site
+
+Une fois les modifications finies, vous allez devoir enregistrer les informations sur le site. Pour ce faire, vous allez devoir vous connecter sur le compte YDetailedFigureset retourner sur le projet.
+
+## Mise en ligne du site
+
