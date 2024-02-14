@@ -104,9 +104,5 @@ Les couleurs changeables sont :
 
 En cas d'ajout de couleur pour les nouvelles années, il suffit d'ajouter une ligne comme les autres (--year-20XX:) et d'ajouter la couleur a la suite. L'attribution de la couleur se fera toute seule pour le reste.
 
-## Enregistrement des informations sur le site
-
-Une fois les modifications finies, vous allez devoir enregistrer les informations sur le site. Pour ce faire, vous allez devoir vous connecter sur le compte YDetailedFigureset retourner sur le projet.
-
 ## Mise en ligne du site
 
