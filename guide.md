@@ -4,14 +4,15 @@ Grâce à ce guide, vous allez pouvoir modifier les informations, couleurs ou te
 
 Pour pouvoir effectuer des changements sur le projet, vous allez devoir vous connecter sur le compte YDetailedFigures. Ensuite rendez-vous sur le fichier que vous souhaitez modifier et cliquez sur le crayon comme indiqué ci-dessous.
 
-[!Github edit btn]()
+[!Github edit btn](https://github.com/Gougouli69/YDetailedFigures/assets/58865656/f269ec3d-e75d-4636-a199-e6bbd39bb2db)
 
 Une fois les modifications effectuées, vérifiez bien que vous n'ayez pas modifié quelque chose involontairement et cliquez sur le bouton "commit changes".
 
 A ce moment, une pop-up va s'ouvrir. Dans le zone de texte "commit message", écrivez succinctement et en anglais une description des modifications apportées, par exemple "add members 2024". Vous pouvez également écrire une description plus longue dans la zone de texte "Extended description" mais cela reste facultatif.
 Ensuite cliquez sur le bouton "Commit changes".
 
-[!Github commit pop-up]()
+[!Github commit pop-up](https://github.com/Gougouli69/YDetailedFigures/assets/58865656/80505c78-acea-4f9e-9fe8-203735ef045a)
+
 
 Vos changements sont effectués mais vous ne les voyez pas sur le site ? C'est tout à fait normal. Pour cela référez-vous à la section **Mise en ligne du site**.
 
