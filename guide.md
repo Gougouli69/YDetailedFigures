@@ -82,6 +82,8 @@ Ensuite remplissez les informations en fonction des paramètres suivants :
 - img qui correspond à l'image du membre
 - isLeader qui correspond à l'année ou le/la membre était chef de projet
 
+Si un membre était déjà présent une autre année, la structure de ses données existe déjà. Dans ce cas, vous allez devoir trouver sa structure et ensuite modifier les informations présentes. Pour ajouter une année, il vous suffit d'ajouter entre les guillemets et le crochet déjà présent une virgule et l'année entre guillemets. Si vous n'êtes pas sûr de la syntaxe, prenez exemple sur les autres déjà présents.
+
 ## Mise à jour des couleurs
 
 Pour changer les couleurs du site, vous allez devoir aller dans le fichier colors.css situé dans le dossier 'common' qui est lui-même dans le dossier 'styles'. Toutes les couleurs resteront en format hexadecimal (un # puis 6 chiffres/lettres entre 0-9 et a-f). Vous pouvez ajouter deux chiffres/lettres dans le meme format que le reste pour inclure la transparence.
