@@ -12,3 +12,6 @@ logs
 *.njsproj
 *.sln
 *.sw?
+
+
+deployer/
