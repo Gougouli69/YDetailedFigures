@@ -14,7 +14,7 @@ Ensuite cliquez sur le bouton "Commit changes".
 ![Github commit pop-up](https://github.com/Gougouli69/YDetailedFigures/assets/58865656/80505c78-acea-4f9e-9fe8-203735ef045a)
 
 
-Vos changements sont effectués mais vous ne les voyez pas sur le site ? C'est tout à fait normal. Pour cela référez-vous à la section **Mise en ligne du site**.
+Vos mises à jour vont être automatiquement mises en places sur le site web. En cas de problème merci de contacter un développeur web.
 
 ## Mise à jour des projets et membres
 
@@ -103,6 +103,3 @@ Les couleurs changeables sont :
 - La couleur du texte (text-color)
 
 En cas d'ajout de couleur pour les nouvelles années, il suffit d'ajouter une ligne comme les autres (--year-20XX:) et d'ajouter la couleur a la suite. L'attribution de la couleur se fera toute seule pour le reste.
-
-## Mise en ligne du site
-
