@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector("header .logo-wrapper");
     console.log(document.location.href)
     logo.addEventListener("click", () => {
-        document.location.href="/landing.html";
+        document.location.href = "/index.html";
     })
 
     const tabs = document.querySelectorAll(".tab-item");
