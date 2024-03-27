@@ -75,6 +75,8 @@ Dans le fichier members.js, vous allez retrouver des structures comme ci-dessous
 
 Pour ajouter un nouveau membre, copiez cet example et collez le entre le crochet et l'accolade fermante à la fin du fichier. Attention a ne pas oublier la virgule après l'accolade fermante et toujours mettre les informations dans les guillemets lorsqu'elles sont présentes. Si une information n'est pas fournie, laisser les guillemets vides et sans espaces.
 
+Placer l'image des nouveaux membres dans le dossier assets/img/photoEquipe.
+
 Ensuite remplissez les informations en fonction des paramètres suivants : 
 
 - year qui correspond à l'année de participation au projet
