@@ -16,9 +16,10 @@ h6 {
     margin: 0;
 }
 
-body{
-    position:relative;
+body {
+    position: relative;
 }
+
 .hidden {
     display: none;
 }
@@ -127,13 +128,13 @@ section h3 {
 .project-wrapper {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
-    gap:25px;
+    gap: 25px;
 }
 
 .project {
-    cursor:pointer;
+    cursor: pointer;
     height: 250px;
     width: 250px;
     border: solid 1px transparent;
@@ -145,36 +146,44 @@ section h3 {
     overflow: hidden;
 }
 
-.project:hover{
-    transform:scale(1.02);
+.project:hover {
+    transform: scale(1.02);
 }
 
 .arrow-to-top {
-    z-index:5;
-    cursor:pointer;
-    position:sticky;
+    z-index: 5;
+    cursor: pointer;
+    position: sticky;
     bottom: 75px;
     left: 20px;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    height:25px;
-    width:25px;
+    height: 25px;
+    width: 25px;
     border: solid 1px #ffffff;
     border-radius: 100%;
-    box-shadow:0px 0px 1px 1px rgba(0,0,0,0.5);
-    transition:0.2s;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
 }
 
-.arrow-to-top span{
-    font-size:18px;
+.arrow-to-top span {
+    font-size: 18px;
     color: #ffffff;
 }
 
-.arrow-to-top:hover{
-    background-color:#ffffff;
+.arrow-to-top:hover {
+    background-color: #ffffff;
 }
 
-.arrow-to-top:hover span{
-    color:var(--main-color-background);
+.arrow-to-top:hover span {
+    color: var(--main-color-background);
+}
+
+@media screen and (max-width:600px) {
+    .search-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+
 }

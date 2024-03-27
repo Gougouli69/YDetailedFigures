@@ -1,8 +1,8 @@
-:root{
-   --main-color-2021:#E09108;
-   --main-color-2022:#9A00C4;
-   --main-color-2023:#A60303;
-   --main-color-background:#292929;
+:root {
+   --main-color-2021: #E09108;
+   --main-color-2022: #9A00C4;
+   --main-color-2023: #A60303;
+   --main-color-background: #292929;
 }
 
 body,
@@ -22,7 +22,7 @@ h6 {
 
 main {
    height: 100%;
-   background-color:var(--main-color-background);
+   background-color: var(--main-color-background);
 }
 
 section {
@@ -186,19 +186,19 @@ section h3 {
 }
 
 .member-infos {
-   z-index:1;
-   position:relative;
-   display:flex;
-   flex-direction:column;
-   gap:15px;
-   justify-content:center;
-   height:100%;
-   width:100%;
-   background-color:rgba(0,0,0,0.5);
-   color:#ffffff;
-   font-size:20px;
-   text-align:center;
-   transform:translateY(100%);
+   z-index: 1;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: #ffffff;
+   font-size: 20px;
+   text-align: center;
+   transform: translateY(100%);
    transition: 0.3s ease-in-out;
 }
 
@@ -210,8 +210,8 @@ section h3 {
    text-shadow: 2px 2px 8px #000000;
 }
 
-.member-item:hover .member-infos{
-   transform:translateY(0);
+.member-item:hover .member-infos {
+   transform: translateY(0);
 }
 
 .member-desc {
@@ -224,19 +224,19 @@ section h3 {
    color: #ffffff;
 }
 
-.member-tags{
-   display:flex;
-   flex-direction:column;
-   gap:10px;
+.member-tags {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
 
-.member-item .contact{
-   position:absolute;
-   bottom:10px;
-   display:flex;
-   justify-content:space-evenly;
-   align-items:space-between;
-   width:100%;
+.member-item .contact {
+   position: absolute;
+   bottom: 10px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: space-between;
+   width: 100%;
 }
 
 .member-item .instagram_Logo img,
@@ -244,8 +244,8 @@ section h3 {
 .member-item .github_Logo img,
 .member-item .portfolio,
 .member-item .mail {
-   cursor:pointer;
-   color:#ffffff;
+   cursor: pointer;
+   color: #ffffff;
    height: 25px;
    transition: .2s ease-in-out;
 }
@@ -286,4 +286,11 @@ section h3 {
 
 .arrow-to-top:hover span {
    color: var(--main-color-background);
+}
+
+@media screen and (max-width:600px) {
+   .search-wrapper {
+      flex-direction: column;
+      gap: 25px;
+   }
 }

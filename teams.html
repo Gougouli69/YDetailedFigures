@@ -14,10 +14,12 @@
 </head>
 
 <body>
-    <header id="top">
-        <div class="logo-wrapper">
-            <img alt="Y-Detailed-Figures_Logo" src="./assets/img/logo-ydf/logo_annee2023.png" />
-        </div>
+    <div class="mobile-background hidden"></div>
+    <div class="mobile-menu hidden">
+        <span class="material-symbols-outlined close-menu-icon">
+            chevron_left
+        </span>
+        <img class="logo" src="/assets/img/logo-ydf/logo_y_orange.png" />
         <ul class="tabs-list">
             <li class="tab-item" id="projects">
                 <p>Projets</p>
@@ -26,7 +28,39 @@
                 <p>Équipes</p>
             </li>
             <li class="tab-item" id="3D_models">
-
+                <p>Modèles 3D</p>
+            </li>
+            <li class="tab-item" id="about">
+                <p>À propos</p>
+            </li>
+        </ul>
+        <div class="mobile-media-link">
+            <a class="github_Logo" href="https://github.com/Gougouli69/YDetailedFigures" target="_blank">
+                <img src="./assets//img/logo-social-network/github-mark-white.svg" />
+            </a>
+            <a class="instagram_Logo" href="https://www.instagram.com/y_detailed_figures/" target="_blank">
+                <img src="./assets/img/logo-social-network/instagram.png" />
+            </a>
+            <a class="artStation_Logo" href="https://www.artstation.com/ydetailed_figures" target="_blank">
+                <img src="./assets/img/logo-social-network/artstation.png" />
+            </a>
+        </div>
+    </div>
+    <header id="top">
+        <div class="logo-wrapper">
+            <img alt="Y-Detailed-Figures_Logo" src="./assets/img/logo-ydf/logo_annee2023.png" />
+        </div>
+        <span class="material-symbols-outlined mobile-menu-icon">
+            menu
+        </span>
+        <ul class="tabs-list">
+            <li class="tab-item" id="projects">
+                <p>Projets</p>
+            </li>
+            <li class="tab-item" id="teams">
+                <p>Équipes</p>
+            </li>
+            <li class="tab-item" id="3D_models">
                 <p>Modèles 3D</p>
             </li>
             <li class="tab-item" id="about">
