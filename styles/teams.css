@@ -17,7 +17,7 @@ h6 {
 }
 
 .hidden {
-   display: none;
+   display: none !important;
 }
 
 main {
@@ -48,8 +48,8 @@ section h3 {
 .searchbar {
    display: flex;
    align-items: center;
-   height: 30px;
-   min-width: 400px;
+   height: 40px;
+   min-width: 450px;
    border: solid 1px #ffffff;
    border-radius: 8px;
    background-color: #ffffff;
@@ -60,10 +60,11 @@ section h3 {
 }
 
 #searchbar {
-   width: 90%;
+   width: 100%;
    padding: 5px;
    border: none;
    border-radius: 8px;
+   font-size: 16px;
 }
 
 #searchbar:focus {
@@ -84,7 +85,7 @@ section h3 {
    color: #ffffff;
    opacity: 0.75;
    cursor: pointer;
-   font-size: 14px;
+   font-size: 18px;
 }
 
 .filter-item#year-2021:hover {
@@ -136,14 +137,23 @@ section h3 {
    color: var(--main-color-2023);
 }
 
-.team-wrapper {}
+.team {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 15px;
+}
 
-.team {}
+
+.team-wrapper .separator {
+   width: 80%;
+   border-top: solid 1px #ffffff;
+}
 
 .team-year {
    text-align: center;
    color: #ffffff;
-   font-size: 25px;
+   font-size: 30px;
 }
 
 .member-list {
@@ -152,6 +162,7 @@ section h3 {
    align-items: center;
    justify-content: center;
    gap: 30px;
+   padding: 0;
 }
 
 .member-item {
@@ -292,5 +303,9 @@ section h3 {
    .search-wrapper {
       flex-direction: column;
       gap: 25px;
+   }
+
+   main {
+      padding: 10px 0;
    }
 }

@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
    function filterEvent() {
       const filterBtn = document.querySelectorAll(".filter-item");
-      const teamWrapper = document.querySelectorAll(".team-item");
+      const teamWrapper = document.querySelectorAll(".team");
       filterBtn.forEach(btn => {
          btn.addEventListener("click", function () {
             this.classList.toggle("selected");
             const teamId = this.getAttribute('id');
             const teamYear = teamId.split('-')[1];
             teamWrapper.forEach(team => {
-               const year = team.getAttribute('data-year');
+               const year = team.closest(".team").getAttribute('data-year');
                if (teamYear === year) {
                   team.classList.toggle("hidden");
                }
@@ -59,23 +59,21 @@ document.addEventListener("DOMContentLoaded", () => {
    function searchEvent() {
       //TODO Search by projects
       const searchbar = document.querySelector("#searchbar");
-      console.log(members)
       searchbar.addEventListener('input', function () {
          const searchedText = searchbar.value.trim().toLowerCase();
          let result = members.filter(member => member.name.toLowerCase().includes(searchedText))
-         console.log("result", result)
          renderTeams(result);
       });
    }
 
    function renderTeams(members) {
-      console.log("members", members)
       const teamWrappper = document.querySelector(".team-wrapper");
       let teamHTML = "";
       years.forEach(year => {
          const membersByYear = members.filter(member => member.year.includes(year))
          const LeaderByYear = membersByYear.filter(member => member.isLeader.includes(year))
          teamHTML += `<div class="team" data-year="${year}">
+            <div class="separator"></div>
             <div class="team-year">Équipe ${year}</div>
             <ul class="member-list">
                ${renderMembers(membersByYear, LeaderByYear)}
@@ -98,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="member-img" style="background-image:url('${img}')"></div>
             <div class="member-infos">
                <p class="member-name">${name}</p>
-               <p class="member-role">${role}${leaders.includes(name)? ', Chef de projet': ''}</p>
+               <p class="member-role">${role}${leaders.includes(name) ? ', Chef de projet' : ''}</p>
                <div class="member-tags">${renderTags(member)}</div>
                <div class="contact">${renderContact(member)}</div>
             </div>
@@ -131,11 +129,11 @@ document.addEventListener("DOMContentLoaded", () => {
                work
             </span>`
             : ``}
-            ${mail ? 
+            ${mail ?
             `<span class="material-symbols-outlined mail">
                chat
             </span>`
-            :``}
+            : ``}
             `;
    }
 
@@ -143,16 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
       //TODO CHECK DOUBLON
       let tagHTML = ``;
       const projectsByMember = projects.filter(project => project.artist.includes(member.name))
-      console.log(projectsByMember);
       const projectsName = [];
       const projectsTheme = [];
       projectsByMember.forEach(project => {
-         console.log(projectsName, projectsTheme)
          if (!tagHTML.includes(project.name) && !projectsName.includes(project.name)) {
             projectsName.push(project.name);
             tagHTML += `<div class="tag-project" data-name='${project.name}'>${project.name}</div>`
          }
-         if (!tagHTML.includes(project.theme) && !projectsTheme.includes(project.theme)){
+         if (!tagHTML.includes(project.theme) && !projectsTheme.includes(project.theme)) {
             projectsTheme.push(project.theme);
             tagHTML += `<div class="tag-theme" data-name='${project.theme}'>${project.theme}</div>`
          }
