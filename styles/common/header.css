@@ -68,3 +68,122 @@ DEACTIVATE 3D MODELS (STILL UNDER DEVELOPMENT)
     color: rgba(0, 0, 0, 0.25);
     pointer-events: none;
 }
+
+.mobile-menu-icon {
+    position: absolute;
+    right: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 35px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    header .tab-item {
+        display: none;
+    }
+
+    .mobile-background {
+        z-index: 3;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.25);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    @keyframes displayMenu {
+        0% {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .mobile-menu {
+        z-index: 4;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 75%;
+        background-color: var(--main-color-background);
+    }
+
+    .open-menu-anim {
+        animation: displayMenu 1s;
+    }
+
+    .close-menu-anim {
+        animation: displayMenu 1s reverse;
+    }
+
+    .mobile-menu .tabs-list {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-menu .tab-item {
+        color: #ffffff;
+        list-style: none;
+        font-size: 35px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .mobile-menu .tab-item:hover {
+        color: #ffffff88;
+    }
+
+    .mobile-menu .close-menu-icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .mobile-menu .logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+    }
+
+    .mobile-media-link {
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mobile-media-link img {
+        width: 50px;
+        transition: 0.3s;
+    }
+
+    .mobile-media-link img:hover {
+        transform: scale(1.1);
+    }
+}

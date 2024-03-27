@@ -25,4 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+
+    const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+    const mobileBackground = document.querySelector(".mobile-background")
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    mobileMenuIcon.addEventListener("click", () => {
+        mobileMenuIcon.classList.toggle("hidden")
+        mobileBackground.classList.toggle("hidden");
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.add("open-menu-anim");
+        mobileMenu.classList.remove("close-menu-anim");
+    })
+
+    const iconCloseMenu = document.querySelector(".close-menu-icon");
+
+    iconCloseMenu.addEventListener("click", () => {
+        mobileMenuIcon.classList.toggle("hidden")
+        mobileBackground.classList.toggle("hidden");
+        mobileMenu.classList.remove("open-menu-anim");
+        mobileMenu.classList.add("close-menu-anim");
+        mobileMenu.classList.toggle("hidden");
+    })
 })
