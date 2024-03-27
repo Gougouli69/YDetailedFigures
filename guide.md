@@ -14,7 +14,7 @@ Ensuite cliquez sur le bouton "Commit changes".
 ![Github commit pop-up](https://github.com/Gougouli69/YDetailedFigures/assets/58865656/80505c78-acea-4f9e-9fe8-203735ef045a)
 
 
-Vos changements sont effectués mais vous ne les voyez pas sur le site ? C'est tout à fait normal. Pour cela référez-vous à la section **Mise en ligne du site**.
+Vos mises à jour vont être automatiquement mises en places sur le site web. En cas de problème merci de contacter un développeur web.
 
 ## Mise à jour des projets et membres
 
@@ -24,7 +24,8 @@ Le fichier comprenant les informations sur les projets se trouve dans le dossier
 
 Dans le fichier projects.js, vous allez retrouver des structures comme ci-dessous :
 
-   `{
+   ```
+{
        name: "",
        year: "",
        conceptArt: \[""\],
@@ -34,7 +35,8 @@ Dans le fichier projects.js, vous allez retrouver des structures comme ci-dessou
        thumbnail: "./assets/img/projects/NomDeLaFigurine/NomDuFichier",
        img: \["./assets/img/projects/NomDeLaFigurine/NomDuFichier"\],
        size:"",
-   },`
+   },
+```
 
 Pour ajouter un nouveau projet, copiez cet example et collez le entre le crochet et l'accolade fermante à la fin du fichier. Attention a ne pas oublier la virgule après l'accolade fermante et toujours mettre les informations dans les guillemets lorsqu'elles sont présentes.Si plusieurs personnes ont participé au concept-art ou a la modélisation, ajoutez une virgule après les guillemets et écrivez les autres noms entre guillemets.
 
@@ -56,7 +58,8 @@ Ensuite remplissez les informations en fonction des paramètres suivants :
 
 Dans le fichier members.js, vous allez retrouver des structures comme ci-dessous :
 
-   `{
+   ```
+{
        year: \[""\],
        name: "",
        role: "",
@@ -67,9 +70,12 @@ Dans le fichier members.js, vous allez retrouver des structures comme ci-dessous
        github: "",
        img: "./assets/img/members/NomDuFichier",
        isLeader: \[""\],
-   },`
+   },
+```
 
 Pour ajouter un nouveau membre, copiez cet example et collez le entre le crochet et l'accolade fermante à la fin du fichier. Attention a ne pas oublier la virgule après l'accolade fermante et toujours mettre les informations dans les guillemets lorsqu'elles sont présentes. Si une information n'est pas fournie, laisser les guillemets vides et sans espaces.
+
+Placer l'image des nouveaux membres dans le dossier assets/img/photoEquipe.
 
 Ensuite remplissez les informations en fonction des paramètres suivants : 
 
@@ -99,10 +105,3 @@ Les couleurs changeables sont :
 - La couleur du texte (text-color)
 
 En cas d'ajout de couleur pour les nouvelles années, il suffit d'ajouter une ligne comme les autres (--year-20XX:) et d'ajouter la couleur a la suite. L'attribution de la couleur se fera toute seule pour le reste.
-
-## Enregistrement des informations sur le site
-
-Une fois les modifications finies, vous allez devoir enregistrer les informations sur le site. Pour ce faire, vous allez devoir vous connecter sur le compte YDetailedFigureset retourner sur le projet.
-
-## Mise en ligne du site
-
