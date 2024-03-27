@@ -136,9 +136,14 @@ DEACTIVATE 3D MODELS (STILL UNDER DEVELOPMENT)
         height: 100vh;
         display: flex;
         flex-direction: column;
-        gap: 150px;
+        gap: 50px;
         justify-content: center;
         align-items: center;
+    }
+
+    .mobile-menu .separator {
+        width: 50%;
+        border-bottom: solid 1px #ffffff;
     }
 
     .mobile-menu .tab-item {
@@ -186,4 +191,5 @@ DEACTIVATE 3D MODELS (STILL UNDER DEVELOPMENT)
     .mobile-media-link img:hover {
         transform: scale(1.1);
     }
+
 }

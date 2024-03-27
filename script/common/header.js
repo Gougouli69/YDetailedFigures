@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector("header .logo-wrapper");
-    console.log(document.location.href)
     logo.addEventListener("click", () => {
         document.location.href = "/index.html";
     })
@@ -10,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
         tab.addEventListener("click", function () {
             let tabID = this.getAttribute("id");
             switch (tabID) {
+                case "landing":
+                    document.location.href = "/index.html"
+                    break;
                 case "teams":
                     document.location.href = "/teams.html"
                     break;

@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderProjects(projects) {
         const projectWrappper = document.querySelector(".project-wrapper");
         let projectHTML = ``;
-        console.log(projects)
         projects.forEach(project => {
             const { thumbnail, name } = project;
             projectHTML += `<div class="project" data-name="${name}" style="background-image:url(${thumbnail})"></div>`;

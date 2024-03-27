@@ -1,10 +1,3 @@
-:root {
-   --main-color-2021: #E09108;
-   --main-color-2022: #9A00C4;
-   --main-color-2023: #A60303;
-   --main-color-background: #292929;
-}
-
 body,
 p,
 h1,
@@ -89,18 +82,18 @@ section h3 {
 }
 
 .filter-item#year-2021:hover {
-   border: solid 1px var(--main-color-2021);
-   color: var(--main-color-2021);
+   border: solid 1px var(--year-2021);
+   color: var(--year-2021);
 }
 
 .filter-item#year-2022:hover {
-   border: solid 1px var(--main-color-2022);
-   color: var(--main-color-2022);
+   border: solid 1px var(--year-2022);
+   color: var(--year-2022);
 }
 
 .filter-item#year-2023:hover {
-   border: solid 1px var(--main-color-2023);
-   color: var(--main-color-2023);
+   border: solid 1px var(--year-2023);
+   color: var(--year-2023);
 }
 
 .filter-item.selected {
@@ -108,33 +101,33 @@ section h3 {
 }
 
 .filter-item:hover#year-2021 {
-   background-color: var(--main-color-2021);
+   background-color: var(--year-2021);
    color: #ffffff !important;
 }
 
 .filter-item:hover#year-2022 {
-   background-color: var(--main-color-2022);
+   background-color: var(--year-2022);
    color: #ffffff !important;
 }
 
 .filter-item:hover#year-2023 {
-   background-color: var(--main-color-2023);
+   background-color: var(--year-2023);
    color: #ffffff !important;
 }
 
 .filter-item.selected#year-2021 {
-   border: solid 1px var(--main-color-2021);
-   color: var(--main-color-2021);
+   border: solid 1px var(--year-2021);
+   color: var(--year-2021);
 }
 
 .filter-item.selected#year-2022 {
-   border: solid 1px var(--main-color-2022);
-   color: var(--main-color-2022);
+   border: solid 1px var(--year-2022);
+   color: var(--year-2022);
 }
 
 .filter-item.selected#year-2023 {
-   border: solid 1px var(--main-color-2023);
-   color: var(--main-color-2023);
+   border: solid 1px var(--year-2023);
+   color: var(--year-2023);
 }
 
 .team {

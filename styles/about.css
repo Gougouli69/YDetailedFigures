@@ -1,10 +1,3 @@
-:root {
-    --main-color-2021: #E09108;
-    --main-color-2022: #9A00C4;
-    --main-color-2023: #A60303;
-    --main-color-background: #292929;
-}
-
 body,
 p,
 h1,
@@ -32,14 +25,14 @@ section {
 }
 
 section h3 {
-    margin-bottom:15px;
+    margin-bottom: 15px;
     font-size: 40px;
     font-weight: 500;
     text-align: center;
 }
 
 section h3 span {
-    color: var(--main-color-2021);
+    color: var(--year-2021);
 }
 
 section h4 {
@@ -90,46 +83,46 @@ section li {
     list-style: circle;
 }
 
-.printing-duration{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.printing-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .printing-duration li {
     width: 80%;
 }
 
-.printing-manual{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.printing-manual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.printing-manual p{
-    margin-bottom:15px;
+.printing-manual p {
+    margin-bottom: 15px;
 }
 
-.download-btn{
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:10px;
-    width:fit-content;
-    color:#ffffff;
-    border:solid 1px var(--main-color-2021);
-    border-radius:8px;
+.download-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: fit-content;
+    color: #ffffff;
+    border: solid 1px var(--year-2021);
+    border-radius: 8px;
     text-decoration: none;
-    transition:0.2s;
+    transition: 0.2s;
 }
 
-.download-btn:hover{
-    background-color: var(--main-color-2021);
+.download-btn:hover {
+    background-color: var(--year-2021);
 }
 
-.download-btn span{
-    margin-left:5px;
+.download-btn span {
+    margin-left: 5px;
 }
 
 .arrow-to-top {
@@ -160,4 +153,15 @@ section li {
 
 .arrow-to-top:hover span {
     color: var(--main-color-background);
+}
+
+@media screen and (max-width:600px) {
+    .software-logo_wrapper {
+        max-width: 500px;
+        flex-wrap: wrap;
+    }
+
+    .download-btn {
+        background-color: var(--year-2021);
+    }
 }
