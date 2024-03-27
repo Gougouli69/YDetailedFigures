@@ -246,4 +246,17 @@ const Members = [
         img: "./assets/img/photoEquipe/pierreHenriMonthuis.png",
         isLeader: [""],
     },
+    {
+        year: ["2023"],
+        name: "Joachim Julie",
+        desc: "",
+        role: "Modélisation 3D",
+        mail: "julie.joachim.22.01@gmail.com",
+        instagram: "https://www.artstation.com/chiisairyuu7",
+        artstation: "https://www.instagram.com/chiisairyuu_draw/",
+        portfolio: "",
+        github: "",
+        img: "./assets/img/photoEquipe/",
+        isLeader: [""],
+    },
 ]
