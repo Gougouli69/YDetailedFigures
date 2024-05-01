@@ -1,4 +1,4 @@
-TEST DEPLOYER v1
+TEST DEPLOYER v2
 
 # Guide de mises à jour YDetailed Figures
 
