@@ -109,7 +109,6 @@ section h3 {
 .btn-3d_models:hover {
     background-color: var(--year-2021);
     color: var(--text-color);
-    ;
 }
 
 section p {
@@ -204,7 +203,6 @@ section p {
 .btn-projects:hover {
     background-color: var(--year-2021);
     color: var(--text-color);
-    ;
 }
 
 .hover-background {
@@ -253,5 +251,4 @@ section p {
     .btn-3d_models {
         background-color: var(--year-2021)
     }
-
 }
