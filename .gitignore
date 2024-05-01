@@ -12,6 +12,9 @@ logs
 *.njsproj
 *.sln
 *.sw?
+*.obj
 
 
 deployer/
+
+node_modules/

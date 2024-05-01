@@ -1,10 +1,11 @@
 :root {
    --primary-color: #E09108;
-   --secondary-color: #ffffff;
-   --background-color: #ffffff;
+
+   --background-color: #292929;
 
    --button-border-color: #E09108;
-   --button-background-color: #ffffff;
+   --button-background-color: #ffffff00;
+   /* 100% transparent */
 
    --year-2023: #A60303;
    --year-2022: #9A00C4;
