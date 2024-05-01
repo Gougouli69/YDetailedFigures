@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="./assets/img/logo-ydf/logo_y_orange.ico" />
     <title>Modèles 3D - Y Detailed Figures</title>
+    <link rel="stylesheet" href="./styles/common/header.css">
+    <link rel="stylesheet" href="./styles/common/footer.css">
+    <link rel="stylesheet" href="./styles/3d_models.css" />
+    <link rel="stylesheet" href="./styles/common/colors.css">
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.164.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.164.1/examples/jsm/"
+        }
+      }
+    </script>
 </head>
+
 <body>
-    <div>Page incoming</div>
+    <div class="mobile-background hidden"></div>
+    <div class="mobile-menu hidden">
+        <img src="./assets/icons/chevron_left.svg" class="close-menu-icon" />
+
+        <img class="logo" src="/assets/img/logo-ydf/logo_y_orange.png" />
+        <ul class="tabs-list">
+            <li class="tab-item" id="landing">
+                <p>Accueil</p>
+            </li>
+            <div class="separator"></div>
+            <li class="tab-item" id="projects">
+                <p>Projets</p>
+            </li>
+            <div class="separator"></div>
+            <li class="tab-item" id="teams">
+                <p>Équipes</p>
+            </li>
+            <div class="separator"></div>
+            <li class="tab-item" id="models_3d">
+                <p>Modèles 3D</p>
+            </li>
+            <div class="separator"></div>
+            <li class="tab-item" id="about">
+                <p>À propos</p>
+            </li>
+        </ul>
+        <div class="mobile-media-link">
+            <a class="github_Logo" href="https://github.com/Gougouli69/YDetailedFigures" target="_blank">
+                <img src="./assets//img/logo-social-network/github-mark-white.svg" />
+            </a>
+            <a class="instagram_Logo" href="https://www.instagram.com/y_detailed_figures/" target="_blank">
+                <img src="./assets/img/logo-social-network/instagram.png" />
+            </a>
+            <a class="artStation_Logo" href="https://www.artstation.com/ydetailed_figures" target="_blank">
+                <img src="./assets/img/logo-social-network/artstation.png" />
+            </a>
+        </div>
+    </div>
+    <header id="top">
+        <div class="logo-wrapper">
+            <img alt="Y-Detailed-Figures_Logo" src="./assets/img/logo-ydf/logo_annee2023.png" />
+        </div>
+        <img class="mobile-menu-icon" src="./assets/icons/menu.svg" />
+        <ul class="tabs-list">
+            <li class="tab-item" id="projects">
+                <p>Projets</p>
+            </li>
+            <li class="tab-item" id="teams">
+                <p>Équipes</p>
+            </li>
+            <li class="tab-item" id="models_3d">
+                <p>Modèles 3D</p>
+            </li>
+            <li class="tab-item" id="about">
+                <p>À propos</p>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="models_3d_intro">
+            <div class="progress-bar-container">
+                <label>Loading...</label>
+            </div>
+            <canvas id="canvas-caroussel"></canvas>
+        </section>
+        <section id="models_3d_list"></section>
+    </main>
+
+    <footer>
+        <div class="logo-wrapper">
+            <img alt="Y-Detailed-Figures_Logo" src="./assets/img/logo-ydf/logo_annee2023.png" />
+        </div>
+        <p>Copyright © 2024 Y Detailed Figures. All rights reserved</p>
+        <div class="social-media-wrapper">
+            <a class="instagram_Logo" href="https://www.instagram.com/y_detailed_figures/" target="_blank">
+                <img src="./assets/img/logo-social-network/instagram.png" />
+            </a>
+            <a class="artStation_Logo" href="https://www.artstation.com/ydetailed_figures" target="_blank">
+                <img src="./assets/img/logo-social-network/artstation.png" />
+            </a>
+        </div>
+    </footer>
+    <script type="module" src="./script/3d_models.js"></script>
+    <script src="./assets/appstructs/projects.js"></script>
+    <script src="./script/common/header.js"></script>
+    <script src="./script/common/footer.js"></script>
 </body>
+
 </html>

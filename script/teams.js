@@ -12,22 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
    })
    years.sort();
 
-   GoToTop();
    renderFilter();
    renderTeams(members);
    filterEvent();
    searchEvent();
-
-   function GoToTop() {
-      const arrowToTop = document.querySelector(".arrow-to-top");
-      arrowToTop.addEventListener("click", () => {
-         window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-         });
-      })
-   }
+   mobileEvent();
 
    function renderFilter() {
       const YearsWrapper = document.querySelector(".filter-wrapper");
@@ -40,16 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
    function filterEvent() {
       const filterBtn = document.querySelectorAll(".filter-item");
-      const teamWrapper = document.querySelectorAll(".team-item");
+      const teamWrapper = document.querySelectorAll(".team");
       filterBtn.forEach(btn => {
          btn.addEventListener("click", function () {
             this.classList.toggle("selected");
             const teamId = this.getAttribute('id');
             const teamYear = teamId.split('-')[1];
             teamWrapper.forEach(team => {
-               const year = team.getAttribute('data-year');
+               const year = team.closest(".team").getAttribute('data-year');
                if (teamYear === year) {
-                  team.classList.toggle("hidden");
+                  team.closest(".team").classList.toggle("hidden");
                }
             })
          });
@@ -57,48 +46,61 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
    function searchEvent() {
-      //TODO Search by projects
       const searchbar = document.querySelector("#searchbar");
-      console.log(members)
       searchbar.addEventListener('input', function () {
          const searchedText = searchbar.value.trim().toLowerCase();
          let result = members.filter(member => member.name.toLowerCase().includes(searchedText))
-         console.log("result", result)
          renderTeams(result);
       });
    }
 
+   function mobileEvent() {
+      const membersItem = document.querySelectorAll(".member-item");
+      membersItem.forEach(item => {
+         item.addEventListener("click", function () {
+            this.querySelector(".member-infos").style.transform = "translate(0)";
+         })
+      })
+      const membersInfos = document.querySelectorAll(".member-infos");
+      membersInfos.forEach(info => {
+         info.addEventListener("click", function () {
+            this.style.transform = "translate(100%)";
+         })
+      })
+   }
+
    function renderTeams(members) {
-      console.log("members", members)
       const teamWrappper = document.querySelector(".team-wrapper");
       let teamHTML = "";
-      years.forEach(year => {
+      for (let i = 0; i < years.length; i++) {
+         let year = years[i]
          const membersByYear = members.filter(member => member.year.includes(year))
          const LeaderByYear = membersByYear.filter(member => member.isLeader.includes(year))
          teamHTML += `<div class="team" data-year="${year}">
+            <div class="separator"></div>
             <div class="team-year">Équipe ${year}</div>
             <ul class="member-list">
                ${renderMembers(membersByYear, LeaderByYear)}
             </ul>
          </div>`;
-      })
+      }
       teamWrappper.innerHTML = teamHTML;
    }
 
    function renderMembers(members, leaders) {
       let memberHTML = '';
-
       if (members.length === 0) {
-         memberHTML = `<div class="empty-skeleton">Aucun résultat</div>`;
+         memberHTML = `<div class="no-result">Aucun résultat</div>`;
       }
       else {
          members.forEach(member => {
             const { name, role, img } = member;
+            const isLeader = leaders.map(leader => leader.name == name);
             memberHTML += `<li class="member-item">
             <div class="member-img" style="background-image:url('${img}')"></div>
             <div class="member-infos">
                <p class="member-name">${name}</p>
-               <p class="member-role">${role}${leaders.includes(name)? ', Chef de projet': ''}</p>
+               <p class="member-role">${role}${isLeader.includes(true) ? ', Chef de projet' : ''}</p>
                <div class="member-tags">${renderTags(member)}</div>
                <div class="contact">${renderContact(member)}</div>
             </div>
@@ -109,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
    function renderContact(member) {
-      //TODO ADD MAIL
       const { instagram, artstation, portfolio, github, mail } = member;
       return contactHTML = `${instagram ?
          `<a class="instagram_Logo" href="${instagram}" target="_blank">
@@ -127,34 +128,26 @@ document.addEventListener("DOMContentLoaded", () => {
                      </a>`
             : ``}
             ${portfolio ?
-            `<span class="material-symbols-outlined portfolio">
-               work
-            </span>`
+            `<a href='${portfolio}' target="_blank">
+               <img class="portfolio" src="./assets/icons/briefcase.svg" />
+            </a>`
             : ``}
-            ${mail ? 
-            `<span class="material-symbols-outlined mail">
-               chat
-            </span>`
-            :``}
+            ${mail ?
+            `<a href='mailto:${mail}'>
+               <img class="mail" src="./assets/icons/mail.svg" />
+            </a>`
+            : ``}
             `;
    }
 
    function renderTags(member) {
-      //TODO CHECK DOUBLON
       let tagHTML = ``;
       const projectsByMember = projects.filter(project => project.artist.includes(member.name))
-      console.log(projectsByMember);
       const projectsName = [];
-      const projectsTheme = [];
       projectsByMember.forEach(project => {
-         console.log(projectsName, projectsTheme)
          if (!tagHTML.includes(project.name) && !projectsName.includes(project.name)) {
             projectsName.push(project.name);
             tagHTML += `<div class="tag-project" data-name='${project.name}'>${project.name}</div>`
-         }
-         if (!tagHTML.includes(project.theme) && !projectsTheme.includes(project.theme)){
-            projectsTheme.push(project.theme);
-            tagHTML += `<div class="tag-theme" data-name='${project.theme}'>${project.theme}</div>`
          }
       })
       return tagHTML;

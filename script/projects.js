@@ -10,44 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     years.sort();
 
-    GoToTop();
     renderFilter();
     renderProjects(projects);
     filterEvent();
     searchEvent();
-
-    function GoToTop() {
-        const arrowToTop = document.querySelector(".arrow-to-top");
-        arrowToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-            });
-        })
-    }
+    handleLightbox();
 
     function renderFilter() {
         const YearsWrapper = document.querySelector(".filter-wrapper");
         let YearsHTML = '';
         years.forEach(year => {
-            YearsHTML += `<div class="filter-item selected" id="year-${year}" style="border:solid 1px var(--year-${year});color:var(--year-${year});">${year}</div>`
+            YearsHTML += `<div class="filter-item selected" id="year-${year}">${year}</div>`
         });
         YearsWrapper.innerHTML = YearsHTML;
     }
 
     function filterEvent() {
         const filterBtn = document.querySelectorAll(".filter-item");
-        const teamWrapper = document.querySelectorAll(".team-item");
+        const projects = document.querySelectorAll(".project");
         filterBtn.forEach(btn => {
             btn.addEventListener("click", function () {
                 this.classList.toggle("selected");
-                const teamId = this.getAttribute('id');
-                const teamYear = teamId.split('-')[1];
-                teamWrapper.forEach(team => {
-                    const year = team.getAttribute('data-year');
-                    if (teamYear === year) {
-                        team.classList.toggle("hidden");
+                const projectId = this.getAttribute('id');
+                const year = projectId.split('-')[1];
+                projects.forEach(project => {
+                    const projectYear = project.getAttribute("data-year");
+                    if (year == projectYear) {
+                        project.classList.toggle("hidden");
                     }
                 })
             });
@@ -55,50 +44,95 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function searchEvent() {
-        //TODO Search by projects
         const searchbar = document.querySelector("#searchbar");
-
-        searchbar.addEventListener("input", function () {
+        searchbar.addEventListener('input', function () {
             const searchedText = searchbar.value.trim().toLowerCase();
-            let result = "";
-            resultByName = projects.filter(project => project.name.toLowerCase().includes(searchedText))
-            resultByArtist = [];
-            projects.forEach(project => {
-                if (project.artist.toLowerCase().includes(searchedText)) {
-                    resultByArtist.push(project)
-                }
+            let result = projects.filter(project => project.name.toLowerCase().includes(searchedText));
+            projects.map(project => {
+                project.artist.forEach(artist => {
+                    if (artist.toLowerCase().includes(searchedText)) {
+                        if (!result.includes(project)) {
+                            result.push(project);
+                        }
+                    }
+                })
             })
-            result.push(resultByName, ...resultByArtist);
             renderProjects(result);
-        })
+        });
     }
 
     function renderProjects(projects) {
         const projectWrappper = document.querySelector(".project-wrapper");
         let projectHTML = ``;
-        console.log(projects)
-        projects.forEach(project => {
-            const { thumbnail, name } = project;
-            projectHTML += `<div class="project" data-name="${name}" style="background-image:url(${thumbnail})"></div>`;
-        });
+        if (projects.length) {
+            projects.forEach(project => {
+                const { thumbnail, name, year } = project;
+                projectHTML += `<div class="project" data-name="${name}" data-year="${year}" style="background-image:url(${thumbnail ? thumbnail : "./assets/img/visuel-a-venir.jpg"})"></div>`;
+            });
+        }
+        else {
+            projectHTML = `<p class="no-result">Aucun résultat</p>`;
+        }
         projectWrappper.innerHTML = projectHTML;
     }
 
-    //TODO RENDER LIGHTBOX + EVENTS
+    function handleLightbox() {
+        const projects = document.querySelectorAll(".project");
+        const lightboxWrapper = document.querySelector(".project-lightbox");
+        const lightboxBackground = document.querySelector(".project-lightbox-background");
+        projects.forEach(project => {
+            project.addEventListener("click", () => {
+                lightboxBackground.classList.toggle("hidden");
+                lightboxWrapper.classList.toggle("hidden");
+                const projectName = project.getAttribute("data-name");
+                const selectedProject = Projects.find(project => project.name == projectName);
+                let { name, artist, img, desc, year, model_3d, isDownloadable, thumbnail } = selectedProject;
+                lightboxWrapper.innerHTML = `<div class="img-wrapper">
+                    <img class="big-img" src="${thumbnail}" />
+                </div>
+                <div class="mini-img-list">
+                    ${renderMiniImgList(img, thumbnail)}
+                </div>
+                <div class="info-wrapper">
+                <h4 id="name-year">${name}</h4>
+                <p id="artist">${artist} - ${year}</p>
+                    <div class="info">
+                        <p id="desc">${desc}</p>
+                        ${isDownloadable ? `<a href="${model_3d}"></a>` : ""}
+                    </div>
+                </div>
+                <img src="./assets/icons/close.svg" class="btn-close">`;
+                const btnCloseLightbox = document.querySelector(".project-lightbox .btn-close");
+                btnCloseLightbox.addEventListener("click", function () {
+                    lightboxWrapper.classList.toggle("hidden");
+                    lightboxBackground.classList.toggle("hidden");
+                });
 
-    //TODO RENDER TAGS ON LIGHTBOX
-    // function renderTags(member) {
-    //     let tagHTML = ``;
-    //     const projectsByMember = projects.filter(project => project.artist.includes(member.name))
-    //     console.log(projectsByMember);
-    //     projectsByMember.forEach(project => {
-    //         if (!tagHTML.includes(project.name) || !tagHTML.includes(project.theme) || !tagHTML.includes(project.year)) {
-    //             tagHTML += `<div class="tag-project" data-name='${project.name}'>${project.name}</div>`
-    //             tagHTML += `<div class="tag-theme" data-name='${project.theme}'>${project.theme}</div>`
-    //             tagHTML += `<div class="tag-year" data-name='${project.year}'>${project.year}</div>`
-    //         }
-    //     })
-    //     return tagHTML;
-    // }
+                const bigImg = document.querySelector(".big-img");
+                const miniImgs = document.querySelectorAll(".mini-img");
+
+                miniImgs.forEach(mini => {
+                    mini.addEventListener("click", function () {
+                        let miniSRC = this.getAttribute("src");
+                        bigImg.setAttribute("src", miniSRC);
+                    })
+                })
+            })
+        });
+
+        lightboxBackground.addEventListener("click", function () {
+            this.classList.toggle("hidden");
+            lightboxWrapper.classList.toggle("hidden");
+        });
+
+    }
+
+    function renderMiniImgList(imgs, thumbnail) {
+        let miniImgListHTML = `<img src="${thumbnail}" class="mini-img" />`
+        imgs.map(img => {
+            miniImgListHTML += `<img src="${img}" class="mini-img" />`
+        })
+        return miniImgListHTML;
+    }
 
 })

@@ -36,20 +36,3 @@ Les étudiants ont donc le temps d'une année scolaire pour créer un concept ar
 ## Mise à jour
 
 Accéder au [guide](./guide.md) pour effectuer des mises à jour sur le site.
-
-## Mettre en prod
-
-- se connecter au vpn d'Ynov
-
-- ouvrir un terminal
-- se connecter en ssh : `ssh fabweb@10.4.1.8`
-
-- se déplacer dans le dossier `cd /var/www/ylab.fr/ydetailedfigures.ylab.fr/`
-
-- vérifier que le .git existe avec `ls -la`
-
-- changer d'user pour fabclt `sudo su fabclt`
-
-- `git pull`
-
-- vérifier que le site est bien à jour
