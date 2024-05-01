@@ -1,3 +1,5 @@
+TEST DEPLOYER v1
+
 # Guide de mises à jour YDetailed Figures
 
 Grâce à ce guide, vous allez pouvoir modifier les informations, couleurs ou textes présents sur le site.
