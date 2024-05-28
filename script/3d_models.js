@@ -5,7 +5,12 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 let modelsCarousselList = [];
 
 renderModelsList();
-renderCaroussel();
+if (modelsCarousselList.length) {
+   renderCaroussel();
+}
+else {
+   document.querySelector("#models_3d_intro").innerHTML = "Aucun modèle 3D téléchargeable gratuitement, veuillez contacter les artistes.";
+}
 
 function renderCaroussel() {
    const canvasCaroussel = document.querySelector("#canvas-caroussel");
@@ -52,7 +57,6 @@ function renderCaroussel() {
       const progressBarContainer = canvasCaroussel.previousElementSibling;
 
       loadingManager.onLoad = function () {
-         console.log("test")
          progressBarContainer.classList.add("hidden");
       };
 
@@ -185,7 +189,7 @@ function renderModelsList() {
    const listWrapper = document.querySelector("#models_3d_list");
    listWrapper.innerHTML = ``;
    Projects.forEach(project => {
-      if (project.isDownloadable) {
+      if (project.isDownloadable && project.model_3d) {
          listWrapper.innerHTML += `<div class="model_3d_item" id="${project.name}">
             <div class="model_item_info">
                <p>${project.name}</p>

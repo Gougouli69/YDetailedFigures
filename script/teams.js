@@ -94,10 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       else {
          members.forEach(member => {
+            let imgMember = "";
             const { name, role, img } = member;
+            if (!img) {
+               imgMember = "./assets/img/visuel-a-venir.jpg";
+            }
+            else {
+               imgMember = img;
+            }
             const isLeader = leaders.map(leader => leader.name == name);
             memberHTML += `<li class="member-item">
-            <div class="member-img" style="background-image:url('${img}')"></div>
+            <div class="member-img" style="background-image:url('${imgMember}')"></div>
             <div class="member-infos">
                <p class="member-name">${name}</p>
                <p class="member-role">${role}${isLeader.includes(true) ? ', Chef de projet' : ''}</p>

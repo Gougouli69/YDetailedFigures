@@ -217,7 +217,7 @@ const Members = [
     },
     {
         year: ["2023"],
-        name: "Pierre-Henri Monthuis",
+        name: "Monthuis Pierre-Henri",
         role: "Modélisation 3D",
         mail: "phmonthuis@gmail.com",
         instagram: "",
@@ -229,14 +229,14 @@ const Members = [
     },
     {
         year: ["2023"],
-        name: "Julie Joachim",
+        name: "Joachim Julie",
         role: "Modélisation 3D",
         mail: "julie.joachim.22.01@gmail.com",
         instagram: "https://www.instagram.com/chiisairyuu_draw/",
         artstation: "https://www.artstation.com/chiisairyuu7",
         portfolio: "",
         github: "",
-        img: "./assets/img/members/",
+        img: "",
         isLeader: [""],
     },
 ]

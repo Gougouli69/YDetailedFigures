@@ -179,6 +179,7 @@ section h3 {
     right: 5px;
     cursor: pointer;
     color: var(--text-color);
+    height: 30px;
 }
 
 .project-lightbox .img-wrapper {
