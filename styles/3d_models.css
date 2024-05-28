@@ -13,12 +13,17 @@ h6 {
 main {
    min-height: calc(100vh - var(--header-height) - var(--footer-height));
    background-color: var(--background-color);
+   display: flex;
+   flex-direction: column;
 }
 
 #models_3d_intro {
    position: relative;
    display: flex;
    justify-content: center;
+   align-items: center;
+   flex: 1;
+   font-size: 25px;
 }
 
 #canvas-caroussel {

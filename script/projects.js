@@ -82,16 +82,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const lightboxBackground = document.querySelector(".project-lightbox-background");
         projects.forEach(project => {
             project.addEventListener("click", () => {
+                let imgProject = "";
+                let thumbnailProject = "";
                 lightboxBackground.classList.toggle("hidden");
                 lightboxWrapper.classList.toggle("hidden");
                 const projectName = project.getAttribute("data-name");
                 const selectedProject = Projects.find(project => project.name == projectName);
                 let { name, artist, img, desc, year, model_3d, isDownloadable, thumbnail } = selectedProject;
+                if (!img) {
+                    imgProject = "./assets/img/visuel-a-venir.jpg"
+                }
+                else {
+                    imgProject = img;
+                }
+                if (!thumbnail) {
+                    thumbnailProject = "./assets/img/visuel-a-venir.jpg";
+                }
+                else {
+                    thumbnailProject = thumbnail;
+                }
                 lightboxWrapper.innerHTML = `<div class="img-wrapper">
-                    <img class="big-img" src="${thumbnail}" />
+                    <img class="big-img" src="${thumbnailProject}" />
                 </div>
                 <div class="mini-img-list">
-                    ${renderMiniImgList(img, thumbnail)}
+                    ${renderMiniImgList(imgProject, thumbnailProject)}
                 </div>
                 <div class="info-wrapper">
                 <h4 id="name-year">${name}</h4>
@@ -129,9 +143,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderMiniImgList(imgs, thumbnail) {
         let miniImgListHTML = `<img src="${thumbnail}" class="mini-img" />`
-        imgs.map(img => {
-            miniImgListHTML += `<img src="${img}" class="mini-img" />`
-        })
+        if (imgs != thumbnail) {
+            imgs.map(img => {
+                miniImgListHTML += `<img src="${img}" class="mini-img" />`
+            })
+        }
         return miniImgListHTML;
     }
 
